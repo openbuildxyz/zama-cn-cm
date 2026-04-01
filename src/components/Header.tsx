@@ -82,8 +82,7 @@ export default function Header() {
         <div className={styles.headerContent}>
           <Link href="/" passHref>
             <div className={styles.logoInfo} style={{ cursor: 'pointer' }}>
-              <Image preview={false} width={30} src="/logo.svg" className={styles.logo} />
-              <span className={styles.logoTitle}>Zama 中文社区</span>
+              <Image preview={false} width={120} src="/logo.svg" className={styles.logo} />
             </div>
           </Link>
           <nav className={styles.nav}>
