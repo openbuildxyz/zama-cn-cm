@@ -1,52 +1,80 @@
 # 什么是 TFHE-rs？
 
-**TFHE-rs** 是 Zama 开发的纯 Rust 实现的全同态加密库，基于 TFHE（Torus Fully Homomorphic Encryption）方案，支持在加密数据上进行布尔运算和整数算术。
+**TFHE-rs** 是 Zama 开发的纯 Rust 实现的全同态加密库，支持对加密数据进行布尔运算和整数算术运算。
 
-> 官方文档：[docs.zama.org/tfhe-rs](https://docs.zama.org/tfhe-rs) | GitHub：[zama-ai/tfhe-rs](https://github.com/zama-ai/tfhe-rs)
+> 官方文档：[docs.zama.ai/tfhe-rs](https://docs.zama.ai/tfhe-rs) | GitHub：[zama-ai/tfhe-rs](https://github.com/zama-ai/tfhe-rs)
 
-## 设计目标
+## 核心特性
 
-TFHE-rs 专为开发者和研究人员设计，提供对 TFHE 的精细控制，同时无需深入了解底层实现细节。其核心目标是：
+- **Rust API**：主要接口，性能最优
+- **C API**：便于与其他语言集成
+- **WASM API**：客户端浏览器环境使用
+- **GPU / HPU 加速**：支持硬件加速后端
 
-- **稳定性**：生产就绪的 API，版本间保持兼容
-- **简洁性**：高层 API 屏蔽复杂的密码学细节
-- **高性能**：经过深度优化的 Rust 实现，业界领先的 FHE 运算速度
-- **完整性**：覆盖 TFHE 所有高级特性
+## 密码学基础
 
-## 支持的 API
+TFHE 基于 **Learning With Errors（LWE，带错误学习）** 问题，具备后量子安全特性。
 
-| API | 说明 |
+Zama 实现了 TFHE 的改进变体，以固定精度整数作为消息，支持：
+
+- **同态加法**：`E[x] + E[y] = E[x+y]`
+- **同态乘法**：`E[x] × E[y] = E[x×y]`
+- **同态函数求值**：`f(E[x]) = E[f(x)]`（通过可编程自举实现）
+
+> 技术白皮书：[whitepaper.zama.ai](https://whitepaper.zama.ai/)
+
+## 基本概念
+
+| 概念 | 说明 |
 |-----|------|
-| **Rust API** | 主要接口，适用于 Rust 项目 |
-| **C API** | 适用于 C/C++ 开发者 |
-| **WASM API** | 客户端 WebAssembly 集成 |
-| **GPU 加速后端** | 利用 GPU 大幅提升计算性能 |
-| **HPU 加速后端** | 专用硬件处理单元加速 |
+| 明文（Cleartext） | 加密前的原始值 |
+| 编码明文（Plaintext） | 经过编码的消息 |
+| 密文（Ciphertext） | 加密后的消息 |
 
-## 核心工作流程
-
-使用 TFHE-rs 进行同态计算的基本步骤：
+## 典型工作流
 
 ```
-1. 生成密钥对（客户端密钥 + 服务端密钥）
-2. 使用客户端密钥加密数据
-3. 使用服务端密钥在密文上执行计算
-4. 使用客户端密钥解密结果
+客户端                           服务端
+  │                               │
+  ├─ 1. 生成密钥对                 │
+  │   (client_key + server_key)   │
+  │                               │
+  ├─ 2. 加密数据 ──────────────►  │
+  │   (使用 client_key)           │
+  │                               ├─ 3. 设置 server_key
+  │                               ├─ 4. 在密文上执行运算
+  │                               │   (全程加密，不解密)
+  │                               │
+  ◄────────────────────────────── ┤ 5. 返回加密结果
+  │                               │
+  └─ 6. 解密结果
+      (使用 client_key)
 ```
-
-客户端密钥（`ClientKey`）用于加密和解密，**必须严格保密**，不能暴露给服务端。服务端密钥（`ServerKey`）可以公开，用于在加密数据上执行计算。
 
 ## 支持的数据类型
 
-- **布尔类型**（`FheBool`）：加密的布尔值，支持与/或/非等逻辑运算
-- **短整数**（`FheUint4` ~ `FheUint8`）：加密的小位宽无符号整数
-- **整数**（`FheUint16` ~ `FheUint256`）：加密的大位宽整数，支持完整算术运算
+| 类型 | 描述 |
+|-----|------|
+| `FheBool` | 加密布尔值 |
+| `FheUint8` ~ `FheUint256` | 加密无符号整数（8~256 位） |
+| `FheInt8` ~ `FheInt256` | 加密有符号整数（8~256 位） |
 
-## 为什么选择 TFHE-rs？
+## API 参考
 
-相比其他 FHE 库，TFHE-rs 具有以下优势：
+- [Rust API 文档](https://docs.rs/tfhe/latest/tfhe/)
+- [C API 参考](https://docs.zama.ai/tfhe-rs)
+- [TFHE 深度解析](https://docs.zama.ai/tfhe-rs)
+- [TFHE-rs Handbook](https://github.com/zama-ai/tfhe-rs-handbook)
 
-- **最快的自举（Bootstrapping）速度**：TFHE 的自举操作延迟极低，可支持任意深度计算
-- **可编程自举**：自举过程中可同时执行任意函数查找表（LUT），效率远超其他方案
-- **成熟的生态**：被 Zama fhEVM、Concrete 等上层工具链所采用
-- **开源免费**：BSD 许可证，可商用
+## 学习资源
+
+- [同态奇偶校验位教程](https://docs.zama.ai/tfhe-rs)
+- [ASCII 字符串大小写转换](https://docs.zama.ai/tfhe-rs)
+- [Boolean API 实现 SHA256](https://docs.zama.ai/tfhe-rs)
+
+## 参考资料
+
+- [官方文档](https://docs.zama.ai/tfhe-rs)
+- [GitHub 仓库](https://github.com/zama-ai/tfhe-rs)
+- [最新版本发布](https://github.com/zama-ai/tfhe-rs/releases)
+- [社区论坛](https://community.zama.ai/)

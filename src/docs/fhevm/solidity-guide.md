@@ -1,8 +1,8 @@
 # Solidity 开发指南
 
-本文介绍如何使用 fhEVM Solidity 库编写保密智能合约。
+本文介绍如何使用 FHEVM Solidity 库编写保密智能合约。
 
-> 官方文档：[docs.zama.org/protocol/solidity-guides](https://docs.zama.org/protocol/solidity-guides/getting-started/overview) | GitHub：[zama-ai/fhevm-solidity](https://github.com/zama-ai/fhevm-solidity)
+> 官方文档：[docs.zama.ai/protocol/solidity-guides](https://docs.zama.ai/protocol/solidity-guides) | 快速入门教程：[Quick Start Tutorial](https://docs.zama.ai/protocol/solidity-guides/getting-started/quick-start-tutorial)
 
 ## 安装
 
@@ -16,24 +16,24 @@ npm install fhevm
 yarn add fhevm
 ```
 
-## 基础用法
+## 环境配置
 
-在 Solidity 合约中引入 fhEVM 库：
+在 Solidity 合约中引入 FHEVM 库：
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import "fhevm/lib/TFHE.sol";
+import "fhevm/lib/FHE.sol";
 
 contract MyConfidentialContract {
     euint32 private encryptedValue;
 
-    function store(einput encryptedInput, bytes calldata inputProof) external {
+    function store(externalEuint32 encryptedInput, bytes calldata inputProof) external {
         // 将用户输入的密文转换为链上加密值
-        encryptedValue = TFHE.asEuint32(encryptedInput, inputProof);
+        encryptedValue = FHE.fromExternal(encryptedInput, inputProof);
         // 授权合约自身可以操作这个密文
-        TFHE.allowThis(encryptedValue);
+        FHE.allowThis(encryptedValue);
     }
 }
 ```
@@ -46,7 +46,7 @@ contract MyConfidentialContract {
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
-import "fhevm/lib/TFHE.sol";
+import "fhevm/lib/FHE.sol";
 
 contract ConfidentialERC20 {
     mapping(address => euint64) private _balances;
@@ -57,42 +57,42 @@ contract ConfidentialERC20 {
         name = _name;
     }
 
-    // 铸造代币（仅限所有者）
+    // 铸造代币
     function mint(address to, uint64 amount) external {
-        euint64 mintAmount = TFHE.asEuint64(amount);
-        _balances[to] = TFHE.add(_balances[to], mintAmount);
-        TFHE.allowThis(_balances[to]);
-        TFHE.allow(_balances[to], to);
+        euint64 mintAmount = FHE.asEuint64(amount);
+        _balances[to] = FHE.add(_balances[to], mintAmount);
+        FHE.allowThis(_balances[to]);
+        FHE.allow(_balances[to], to);
     }
 
     // 加密转账：金额对外不可见
     function transfer(
         address to,
-        einput encryptedAmount,
+        externalEuint64 encryptedAmount,
         bytes calldata inputProof
     ) external {
-        euint64 amount = TFHE.asEuint64(encryptedAmount, inputProof);
+        euint64 amount = FHE.fromExternal(encryptedAmount, inputProof);
 
         // 检查余额是否充足（返回加密布尔值）
-        ebool canTransfer = TFHE.le(amount, _balances[msg.sender]);
+        ebool canTransfer = FHE.le(amount, _balances[msg.sender]);
 
-        // 根据加密条件更新余额（全程加密）
-        _balances[msg.sender] = TFHE.select(
+        // 根据加密条件更新余额（全程加密，不暴露任何信息）
+        _balances[msg.sender] = FHE.select(
             canTransfer,
-            TFHE.sub(_balances[msg.sender], amount),
+            FHE.sub(_balances[msg.sender], amount),
             _balances[msg.sender]
         );
-        _balances[to] = TFHE.select(
+        _balances[to] = FHE.select(
             canTransfer,
-            TFHE.add(_balances[to], amount),
+            FHE.add(_balances[to], amount),
             _balances[to]
         );
 
-        // 授权接收方查看自己的余额
-        TFHE.allow(_balances[to], to);
-        TFHE.allow(_balances[msg.sender], msg.sender);
-        TFHE.allowThis(_balances[to]);
-        TFHE.allowThis(_balances[msg.sender]);
+        // 授权双方查看各自余额
+        FHE.allow(_balances[to], to);
+        FHE.allow(_balances[msg.sender], msg.sender);
+        FHE.allowThis(_balances[to]);
+        FHE.allowThis(_balances[msg.sender]);
     }
 
     // 查询余额（只有授权地址可解密）
@@ -102,22 +102,40 @@ contract ConfidentialERC20 {
 }
 ```
 
-## 访问控制
-
-fhEVM 通过 ACL 合约管理密文访问权限：
+## 类型转换
 
 ```solidity
-// 授权合约自身可持续操作此密文
-TFHE.allowThis(encryptedValue);
+// 明文 → 加密类型
+euint32 enc = FHE.asEuint32(100);
+ebool encBool = FHE.asEbool(true);
+eaddress encAddr = FHE.asEaddress(msg.sender);
 
-// 授权特定地址可解密此密文
-TFHE.allow(encryptedValue, userAddress);
+// 加密整数 → 加密布尔
+ebool b = FHE.asEbool(encUint);
 
-// 临时授权（仅在当前交易中有效）
-TFHE.allowTransient(encryptedValue, contractAddress);
+// 不同位宽之间的转换（需显式转换）
+euint64 big = FHE.asEuint64(smallEuint32);
+```
 
-// 设为公开可解密
-TFHE.makePubliclyDecryptable(encryptedValue);
+## 访问控制
+
+FHEVM 通过 ACL 合约管理密文访问权限：
+
+```solidity
+// 永久授权合约自身持续操作此密文
+FHE.allowThis(encryptedValue);
+
+// 永久授权特定地址可解密此密文
+FHE.allow(encryptedValue, userAddress);
+
+// 临时授权（仅在当前交易中有效，适合跨合约调用）
+FHE.allowTransient(encryptedValue, contractAddress);
+
+// 设为公开可解密（任何人都可查看）
+FHE.makePubliclyDecryptable(encryptedValue);
+
+// 验证发送者是否有权访问此密文
+require(FHE.isSenderAllowed(encryptedValue));
 ```
 
 ## 常用运算
@@ -125,61 +143,65 @@ TFHE.makePubliclyDecryptable(encryptedValue);
 ### 算术运算
 
 ```solidity
-euint32 a = TFHE.asEuint32(encA, proofA);
-euint32 b = TFHE.asEuint32(encB, proofB);
+euint32 a = FHE.fromExternal(encA, proofA);
+euint32 b = FHE.fromExternal(encB, proofB);
 
-euint32 sum  = TFHE.add(a, b);   // a + b
-euint32 diff = TFHE.sub(a, b);   // a - b
-euint32 prod = TFHE.mul(a, b);   // a * b
-euint32 div  = TFHE.div(a, 10);  // a / 10（明文除数）
+euint32 sum  = FHE.add(a, b);    // a + b
+euint32 diff = FHE.sub(a, b);    // a - b
+euint32 prod = FHE.mul(a, b);    // a * b
+euint32 div  = FHE.div(a, 10);   // a / 10（除数必须为明文）
+euint32 mn   = FHE.min(a, b);    // min(a, b)
+euint32 mx   = FHE.max(a, b);    // max(a, b)
 ```
 
-### 比较运算（返回 ebool）
+### 比较运算（返回 `ebool`）
 
 ```solidity
-ebool isEqual = TFHE.eq(a, b);   // a == b
-ebool isLess  = TFHE.lt(a, b);   // a < b
-ebool isGreat = TFHE.gt(a, b);   // a > b
-ebool isLeq   = TFHE.le(a, b);   // a <= b
-ebool isGeq   = TFHE.ge(a, b);   // a >= b
+ebool isEqual = FHE.eq(a, b);    // a == b
+ebool isNe    = FHE.ne(a, b);    // a != b
+ebool isLess  = FHE.lt(a, b);    // a < b
+ebool isGreat = FHE.gt(a, b);    // a > b
+ebool isLeq   = FHE.le(a, b);    // a <= b
+ebool isGeq   = FHE.ge(a, b);    // a >= b
 ```
 
 ### 条件选择（替代 if-else）
 
 ```solidity
 // 根据加密条件选择加密值，等价于：result = condition ? a : b
-euint32 result = TFHE.select(condition, a, b);
+// 注意：两个分支都会"执行"，但只有符合条件的结果有效
+euint32 result = FHE.select(condition, a, b);
 ```
 
-## 客户端 SDK
+### 链上随机数
 
-前端使用 `fhevmjs` 处理加密和解密：
-
-```typescript
-import { createInstance } from 'fhevmjs';
-
-const instance = await createInstance({
-  chainId: 1,   // 链 ID
-  networkUrl: 'https://rpc.example.com',
-  gatewayUrl: 'https://gateway.zama.ai',
-});
-
-// 加密一个值并生成证明
-const { handles, inputProof } = instance.createEncryptedInput(
-  contractAddress,
-  userAddress
-);
-handles.add32(100n);  // 加密数值 100
-
-const encryptedInput = handles.encrypt();
-
-// 调用合约
-await contract.transfer(recipient, encryptedInput, inputProof);
+```solidity
+// 生成加密随机数（对链上其他合约不可见）
+euint32 rand = FHE.randEuint32();
+euint64 rand64 = FHE.randEuint64();
 ```
 
 ## 注意事项
 
-1. **Gas 成本**：FHE 运算的 gas 消耗高于普通运算，设计合约时需要优化
-2. **异步解密**：链上解密是异步的，需要通过回调或事件处理
+1. **Gas 成本**：FHE 运算的 gas 消耗远高于普通运算，设计合约时需要优化调用次数
+2. **符号执行**：链上只处理轻量级密文句柄，实际 FHE 计算由协处理器异步完成
 3. **输入证明**：所有用户输入的密文都需要附带有效性证明（`inputProof`）
-4. **密文句柄**：链上存储的是密文的句柄（32 字节），实际 FHE 计算由协处理器完成
+4. **除法限制**：`FHE.div` 和 `FHE.rem` 的除数必须是明文（plaintext），不支持密文除以密文
+5. **ACL 管理**：务必在操作密文后调用 `FHE.allowThis` 或 `FHE.allow`，否则后续无法使用该密文
+
+## 开发环境
+
+推荐使用 FHEVM Hardhat 模板快速启动：
+
+```bash
+git clone https://github.com/zama-ai/fhevm-hardhat-template
+cd fhevm-hardhat-template
+npm install
+```
+
+## 参考资料
+
+- [官方文档](https://docs.zama.ai/protocol/solidity-guides)
+- [快速入门教程（30分钟）](https://docs.zama.ai/protocol/solidity-guides/getting-started/quick-start-tutorial)
+- [Hardhat 环境配置](https://docs.zama.ai/protocol/solidity-guides)
+- [迁移指南（升级到 v0.7）](https://docs.zama.ai/protocol/solidity-guides)

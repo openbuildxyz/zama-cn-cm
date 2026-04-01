@@ -2,7 +2,7 @@
 
 TFHE-rs 基于严谨的密码学基础，默认提供至少 **128 位安全强度**，可抵御量子计算机攻击。
 
-> 官方文档：[docs.zama.org/tfhe-rs/get-started/security-and-cryptography](https://docs.zama.org/tfhe-rs/get-started/security-and-cryptography)
+> 官方文档：[docs.zama.ai/tfhe-rs/get-started/security-and-cryptography](https://docs.zama.ai/tfhe-rs/get-started/security-and-cryptography)
 
 ## 密码学基础
 
