@@ -82,8 +82,8 @@ export default function Header() {
         <div className={styles.headerContent}>
           <Link href="/" passHref>
             <div className={styles.logoInfo} style={{ cursor: 'pointer' }}>
-              <Image preview={false} width={30} src="/logo.png" className={styles.logo} />
-              <span className={styles.logoTitle}>DevPlaza</span>
+              <Image preview={false} width={30} src="/logo.svg" className={styles.logo} />
+              <span className={styles.logoTitle}>Zama 中文社区</span>
             </div>
           </Link>
           <nav className={styles.nav}>
@@ -106,8 +106,8 @@ export default function Header() {
               menu={{
                 items: [
                   { key: 'docs', label: <Link href="/docs">开发文档</Link> },
-                  { key: 'guides', label: <Link href="" target="_blank">开发指南</Link> },
-                  { key: 'codes', label: <Link href="" target="_blank">示例代码</Link> },
+                  { key: 'guides', label: <Link href="https://docs.zama.ai" target="_blank">Zama 官方文档</Link> },
+                  { key: 'codes', label: <Link href="https://github.com/zama-ai" target="_blank">示例代码</Link> },
                 ],
               }}
               placement="bottom"
@@ -170,7 +170,7 @@ export default function Header() {
       <Drawer
         title={
           <div style={{
-            background: 'linear-gradient(135deg, #1f2937, #6E54FF)',
+            background: 'linear-gradient(135deg, #1f2937, #FFCE44)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: 'transparent',
@@ -215,11 +215,11 @@ export default function Header() {
                 <span>📖</span>
                 <span>开发文档</span>
               </Link>
-              <Link href="" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+              <Link href="https://docs.zama.ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>⚙️</span>
-                <span>开发指南</span>
+                <span>Zama 官方文档</span>
               </Link>
-              <Link href="" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+              <Link href="https://github.com/zama-ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>💻</span>
                 <span>示例代码</span>
               </Link>

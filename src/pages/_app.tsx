@@ -16,7 +16,7 @@ dayjs.locale('zh-cn');
 
 const customTheme = {
   token: {
-    colorPrimary: '#6E54FF',
+    colorPrimary: '#FFCE44',
   },
 };
 
@@ -24,7 +24,7 @@ export default function App({
   Component,
   pageProps: { session, ...pageProps },
 }: AppProps) {
-  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'DevPlaza';
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || 'Zama 中文社区';
 
   return (
     <SessionProvider

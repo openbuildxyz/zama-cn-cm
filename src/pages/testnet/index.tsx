@@ -230,7 +230,7 @@ export default function TestnetPage() {
           <div className={styles.heroContent}>
             <Title level={1} className={styles.heroTitle}>
               <span className={styles.titleGradient}>
-                在 DevPlaza 尽情体验、尝试与构建
+                在 Zama 中文社区尽情体验、尝试与构建
               </span>
             </Title>
           </div>

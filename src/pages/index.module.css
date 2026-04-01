@@ -44,12 +44,12 @@
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 25px rgba(255, 206, 68, 0.25);
 }
 
 .logoText {
@@ -61,7 +61,7 @@
 .logoGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   border-radius: 0.75rem;
   filter: blur(10px);
   opacity: 0.5;
@@ -71,7 +71,7 @@
 .logoTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #1f2937, #6E54FF);
+  background: linear-gradient(135deg, #1f2937, #FFCE44);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,7 +93,7 @@
 }
 
 .navItem:hover {
-  color: #6E54FF;
+  color: #FFCE44;
   transform: scale(1.05);
 }
 
@@ -103,19 +103,19 @@
 }
 
 .navButton {
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   color: white;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+  box-shadow: 0 10px 25px rgba(255, 206, 68, 0.25);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .navButton:hover {
-  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 206, 68, 0.4);
   transform: scale(1.05);
 }
 
@@ -162,15 +162,15 @@
 }
 
 .newsBadge {
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   color: white;
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(255, 206, 68, 0.3);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
   /* 给标签添加轻微阴影以增强可读性 */
 }
 
@@ -297,7 +297,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: #6366F1;
+  background: #F5A623;
   border-radius: 50%;
   opacity: 0.2;
   animation: pulse 2s infinite;
@@ -323,9 +323,9 @@
 
 .heroBadge {
   display: inline-block;
-  background: rgba(110, 84, 255, 0.15);
-  border: 1px solid rgba(110, 84, 255, 0.3);
-  color: #6E54FF;
+  background: rgba(255, 206, 68, 0.15);
+  border: 1px solid rgba(255, 206, 68, 0.3);
+  color: #FFCE44;
   padding: 0.5rem 1rem;
   border-radius: 16px;
   font-size: 0.875rem;
@@ -378,7 +378,7 @@
 
 
 .heroTitlePrimary {
-  background: linear-gradient(135deg, #1f2937, #6E54FF, #3b82f6);
+  background: linear-gradient(135deg, #1f2937, #FFCE44, #3b82f6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -408,7 +408,7 @@
   height: 80px;
   left: 0;
   top: 0;
-  background: linear-gradient(180deg, rgba(110, 84, 255, 0) 0%, #6E54FF 100%);
+  background: linear-gradient(180deg, rgba(255, 206, 68, 0) 0%, #FFCE44 100%);
   opacity: 0.5;
 }
 
@@ -418,7 +418,7 @@
   height: 8px;
   left: 0;
   top: 72px;
-  background: #6E54FF;
+  background: #FFCE44;
 }
 
 .heroSubtitle {
@@ -455,14 +455,14 @@
 }
 
 .heroPrimaryButton {
-  background: #6E54FF;
-  color: white !important;
+  background: #FFCE44;
+  color: #1f2937 !important;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(110, 84, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -473,9 +473,9 @@
 }
 
 .heroPrimaryButton:hover {
-  background: #5b47d1;
-  color: white !important;
-  box-shadow: 0 6px 16px rgba(110, 84, 255, 0.4);
+  background: #F5A623;
+  color: #1f2937 !important;
+  box-shadow: 0 6px 16px rgba(255, 206, 68, 0.4);
   transform: translateY(-1px);
   border: none;
   text-decoration: none;
@@ -483,13 +483,13 @@
 
 .heroSecondaryButton {
   background: rgba(255, 255, 255, 0.9);
-  color: #6E54FF;
-  border: 1px solid rgba(110, 84, 255, 0.2);
+  color: #1f2937;
+  border: 1px solid rgba(255, 206, 68, 0.4);
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 1rem;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(110, 84, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -499,11 +499,11 @@
 }
 
 .heroSecondaryButton:hover {
-  background: rgba(255, 255, 255, 1);
-  border-color: #6E54FF;
-  box-shadow: 0 6px 16px rgba(110, 84, 255, 0.25);
+  background: rgba(255, 206, 68, 0.1);
+  border-color: #FFCE44;
+  box-shadow: 0 6px 16px rgba(255, 206, 68, 0.25);
   transform: translateY(-1px);
-  color: #5b47d1;
+  color: #1f2937;
 }
 
 .buttonIcon {
@@ -521,19 +521,19 @@
 }
 
 .heroPrimaryButton .buttonIcon {
-  color: white;
+  color: #1f2937;
 }
 
 .heroPrimaryButton:hover .buttonIcon {
-  color: white;
+  color: #1f2937;
 }
 
 .heroSecondaryButton .buttonIcon {
-  color: #6E54FF;
+  color: #1f2937;
 }
 
 .heroSecondaryButton:hover .buttonIcon {
-  color: #5b47d1;
+  color: #1f2937;
 }
 
 /* Hero Gallery */
@@ -654,9 +654,9 @@
 }
 
 .galleryNavigation:hover {
-  background: rgba(110, 84, 255, 0.1);
-  border-color: rgba(110, 84, 255, 0.3);
-  box-shadow: 0 12px 32px rgba(110, 84, 255, 0.2);
+  background: rgba(255, 206, 68, 0.1);
+  border-color: rgba(255, 206, 68, 0.3);
+  box-shadow: 0 12px 32px rgba(255, 206, 68, 0.2);
 }
 
 .galleryNavPrev {
@@ -670,12 +670,12 @@
 .galleryNavIcon {
   width: 20px;
   height: 20px;
-  color: #6E54FF;
+  color: #FFCE44;
   transition: all 0.3s ease;
 }
 
 .galleryNavigation:hover .galleryNavIcon {
-  color: #5b47d1;
+  color: #F5A623;
 }
 
 /* 在触摸设备上隐藏导航按钮 */
@@ -973,7 +973,7 @@
   padding: 0.75rem;
   border-radius: 50%;
   background: #f3e8ff;
-  color: #6E54FF;
+  color: #FFCE44;
   transition: transform 0.3s ease;
 }
 
@@ -995,7 +995,7 @@
 }
 
 .statItem:hover .statValue {
-  color: #6E54FF;
+  color: #FFCE44;
 }
 
 .statLabel {
@@ -1049,7 +1049,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(110, 84, 255, 0.08),
+      rgba(255, 206, 68, 0.08),
       rgba(99, 102, 241, 0.06));
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1075,22 +1075,22 @@
 .featureCard:hover .featureCardContent {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: rgba(110, 84, 255, 0.15);
+  border-color: rgba(255, 206, 68, 0.15);
 }
 
 .featureIconWrapper {
   display: inline-flex;
   padding: 1rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.1), rgba(99, 102, 241, 0.08));
-  color: #6E54FF;
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.1), rgba(99, 102, 241, 0.08));
+  color: #FFCE44;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
 .featureCard:hover .featureIconWrapper {
   transform: scale(1.03);
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.15), rgba(99, 102, 241, 0.12));
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.15), rgba(99, 102, 241, 0.12));
 }
 
 .featureIcon {
@@ -1153,7 +1153,7 @@
 .activityCard:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  border-color: rgba(110, 84, 255, 0.2);
+  border-color: rgba(255, 206, 68, 0.2);
 }
 
 .activityCardHeader {
@@ -1285,12 +1285,12 @@
   bottom: 0;
   width: 5px;
   background: linear-gradient(to bottom,
-      #6E54FF 0%,
-      #6366F1 35%,
-      #8B5CF6 65%,
-      #a78bfa 100%);
+      #FFCE44 0%,
+      #F5A623 35%,
+      #F5A623 65%,
+      #FFCE44 100%);
   border-radius: 3px;
-  box-shadow: 0 0 16px rgba(110, 84, 255, 0.25);
+  box-shadow: 0 0 16px rgba(255, 206, 68, 0.25);
 }
 
 @media (min-width: 768px) {
@@ -1362,16 +1362,16 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #6E54FF;
+  color: #FFCE44;
   font-weight: 600;
   font-size: 0.875rem;
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.08), rgba(99, 102, 241, 0.06));
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.08), rgba(99, 102, 241, 0.06));
   padding: 0.4rem 1rem;
   border-radius: 24px;
-  border: 1px solid rgba(110, 84, 255, 0.15);
+  border: 1px solid rgba(255, 206, 68, 0.15);
   backdrop-filter: blur(8px);
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(110, 84, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.08);
 }
 
 .milestoneDateIcon {
@@ -1392,7 +1392,7 @@
 }
 
 .milestoneContent:hover .milestoneTitle {
-  color: #6E54FF;
+  color: #FFCE44;
 }
 
 .milestoneContent:hover .milestoneDescription {
@@ -1431,14 +1431,14 @@
   width: 4.2rem;
   height: 4.2rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6E54FF 0%, #6366F1 50%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #FFCE44 0%, #F5A623 50%, #F5A623 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
   box-shadow:
-    0 8px 16px rgba(110, 84, 255, 0.15),
-    0 2px 8px rgba(110, 84, 255, 0.1),
+    0 8px 16px rgba(255, 206, 68, 0.15),
+    0 2px 8px rgba(255, 206, 68, 0.1),
     inset 0 1px 3px rgba(255, 255, 255, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
@@ -1465,7 +1465,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6E54FF, #a78bfa);
+  background: linear-gradient(135deg, #FFCE44, #FFCE44);
   filter: blur(10px);
   opacity: 0.5;
   animation: pulse 3s infinite;
@@ -1474,8 +1474,8 @@
 .milestoneItem:hover .milestoneIcon {
   transform: translateX(-50%) scale(1.05);
   box-shadow:
-    0 12px 24px rgba(110, 84, 255, 0.2),
-    0 4px 12px rgba(110, 84, 255, 0.15),
+    0 12px 24px rgba(255, 206, 68, 0.2),
+    0 4px 12px rgba(255, 206, 68, 0.15),
     inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
@@ -1485,10 +1485,10 @@
 }
 
 .milestoneDateBadge:hover {
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.12), rgba(99, 102, 241, 0.1));
-  border-color: rgba(110, 84, 255, 0.25);
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.12), rgba(99, 102, 241, 0.1));
+  border-color: rgba(255, 206, 68, 0.25);
   transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(110, 84, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.12);
 }
 
 @media (max-width: 767px) {
@@ -1548,7 +1548,7 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(110, 84, 255, 0.08),
+      rgba(255, 206, 68, 0.08),
       rgba(99, 102, 241, 0.06));
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -1563,7 +1563,7 @@
 .resourceCard:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: rgba(110, 84, 255, 0.15);
+  border-color: rgba(255, 206, 68, 0.15);
 }
 
 .resourceCardHeader {
@@ -1575,15 +1575,15 @@
   display: inline-flex;
   padding: 1rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.1), rgba(99, 102, 241, 0.08));
-  color: #6E54FF;
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.1), rgba(99, 102, 241, 0.08));
+  color: #FFCE44;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
 .resourceCard:hover .resourceIconWrapper {
   transform: scale(1.03);
-  background: linear-gradient(135deg, rgba(110, 84, 255, 0.15), rgba(99, 102, 241, 0.12));
+  background: linear-gradient(135deg, rgba(255, 206, 68, 0.15), rgba(99, 102, 241, 0.12));
 }
 
 .resourceIcon {
@@ -1609,7 +1609,7 @@
 
 .resourceButton {
   width: 100%;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   color: white;
   border: none;
   padding: 0.75rem 1rem;
@@ -1620,9 +1620,9 @@
 }
 
 .resourceButton:hover {
-  background: linear-gradient(135deg, #5b47d1, #4f46e5);
+  background: linear-gradient(135deg, #F5A623, #4f46e5);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(110, 84, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.2);
 }
 
 /* Members Section */
@@ -1734,17 +1734,17 @@
 }
 
 .memberItem:hover .memberName {
-  color: #6E54FF;
+  color: #FFCE44;
 }
 
 .memberItem:hover .memberTwitter {
-  color: #6366F1;
+  color: #F5A623;
 }
 
 /* CTA Section */
 .cta {
   padding: 5rem 1rem;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #1a1a2e 0%, #0E100F 100%);
   color: white;
   position: relative;
   overflow: hidden;
@@ -1812,8 +1812,8 @@
 }
 
 .ctaPrimaryButton {
-  background: white;
-  color: #6E54FF;
+  background: #FFCE44;
+  color: #1f2937;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
@@ -1826,8 +1826,8 @@
 }
 
 .ctaPrimaryButton:hover {
-  background: #f3f4f6;
-  color: #6E54FF;
+  background: #F5A623;
+  color: #1f2937;
   transform: scale(1.1);
 }
 
@@ -1880,7 +1880,7 @@
   position: relative;
   width: 2rem;
   height: 2rem;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -1896,7 +1896,7 @@
 .footerLogoGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   border-radius: 0.5rem;
   filter: blur(10px);
   opacity: 0.5;
@@ -2214,9 +2214,9 @@
 }
 
 .tag {
-  color: #6366F1;
+  color: #F5A623;
   padding: 2px 6px;
-  border-color: #6366F1;
+  border-color: #F5A623;
   border-radius: 4px;
   font-size: 12px;
 }
@@ -2247,8 +2247,8 @@
 }
 
 .viewMoreButton:hover {
-  background: linear-gradient(135deg, #5b47d1 0%, #6E54FF 100%);
+  background: linear-gradient(135deg, #F5A623 0%, #FFCE44 100%);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(110, 84, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.3);
   transform: translateY(-1px);
 }

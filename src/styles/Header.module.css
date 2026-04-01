@@ -33,7 +33,7 @@
 
 .headerContent:hover {
   background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0px 6px 16px rgba(110, 84, 255, 0.15);
+  box-shadow: 0px 6px 16px rgba(255, 206, 68, 0.15);
   transform: translateY(-1px);
 }
 
@@ -47,7 +47,7 @@
 .logoTitle {
   font-size: 1.4rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #1f2937 0%, #6E54FF 100%);
+  background: linear-gradient(135deg, #1f2937 0%, #FFCE44 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -80,8 +80,8 @@
 }
 
 .navItem:hover {
-  color: #6E54FF;
-  background: rgba(110, 84, 255, 0.1);
+  color: #FFCE44;
+  background: rgba(255, 206, 68, 0.1);
 }
 
 .navIcon {
@@ -90,14 +90,14 @@
 }
 
 .navButton {
-  background: #6E54FF;
-  color: white;
+  background: #FFCE44;
+  color: #1f2937;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 0.95rem;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(110, 84, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
@@ -106,8 +106,8 @@
 }
 
 .navButton:hover {
-  background: #5b47d1;
-  box-shadow: 0 4px 12px rgba(110, 84, 255, 0.4);
+  background: #F5A623;
+  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.4);
   transform: translateY(-1px);
 }
 
@@ -158,15 +158,15 @@
 }
 
 .newsBadge {
-  background: linear-gradient(135deg, #6E54FF, #6366F1);
+  background: linear-gradient(135deg, #FFCE44, #F5A623);
   color: white;
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  border: 1px solid rgba(255, 206, 68, 0.3);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
 }
 
 .newsText {
@@ -234,8 +234,8 @@
 
 .mobileMenuButton:hover {
   background: #f3f4f6;
-  border-color: #6E54FF;
-  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+  border-color: #FFCE44;
+  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.15);
 }
 
 .mobileMenuButton:active {
@@ -275,7 +275,7 @@
   left: 0;
   width: 2rem;
   height: 2px;
-  background: linear-gradient(90deg, #6366F1, #6E54FF);
+  background: linear-gradient(90deg, #F5A623, #FFCE44);
   border-radius: 1px;
 }
 
@@ -299,9 +299,9 @@
 }
 
 .mobileMenuLink:hover {
-  background: rgba(139, 92, 246, 0.05);
-  border-color: rgba(139, 92, 246, 0.2);
-  color: #6E54FF;
+  background: rgba(255, 206, 68, 0.05);
+  border-color: rgba(255, 206, 68, 0.2);
+  color: #FFCE44;
   transform: translateX(4px);
 }
 

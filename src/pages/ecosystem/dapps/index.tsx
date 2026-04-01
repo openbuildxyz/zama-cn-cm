@@ -209,9 +209,9 @@ export default function EcosystemPage() {
         <div className={styles.heroContent}>
           <div className={styles.heroHeader}>
             <div className={styles.heroText}>
-              <h1 className={styles.heroTitle}>DevPlaza</h1>
+              <h1 className={styles.heroTitle}>Zama 中文社区</h1>
               <p className={styles.heroDescription}>
-                聚合 Web3 活动、社区、文章与开发者数据，为开发者提供一站式探索与成长的平台。
+                探索基于全同态加密（FHE）技术构建的隐私 DApp 生态，发现 Zama 生态系统中的优质项目。
               </p>
             </div>
             {status === 'authenticated' && permissions.includes('dapp:write') && (
@@ -270,7 +270,7 @@ export default function EcosystemPage() {
             <Button
               size="large"
             >
-              DevPlaza 项目
+              Zama 生态项目
             </Button>
             <Button
               size="large"

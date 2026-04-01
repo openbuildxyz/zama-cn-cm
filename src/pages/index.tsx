@@ -132,24 +132,24 @@ export default function Home() {
 
   const features = [
     {
-      icon: <Zap className={styles.featureIcon} />,
-      title: '多链聚合',
-      description: '统一整合以太坊等多条 Web3 链上的活动、文章、博客和社区动态',
+      icon: <Lock className={styles.featureIcon} />,
+      title: '全同态加密（FHE）',
+      description: 'Zama 的 TFHE 方案支持在加密数据上进行任意计算，实现真正的数据隐私保护，无需解密即可运算',
     },
     {
       icon: <Shield className={styles.featureIcon} />,
-      title: '开发者分析',
-      description: '实时采集并统计开发者数据，帮助发现生态趋势与活跃度',
+      title: '隐私智能合约',
+      description: '基于 fhEVM，开发者可在以太坊链上构建端到端加密的保密智能合约，保护用户链上隐私',
     },
     {
       icon: <Cpu className={styles.featureIcon} />,
-      title: '内容聚合',
-      description: '跨平台整合 Web3 最新资讯与优质文章，减少信息碎片化',
+      title: '高性能密码学',
+      description: 'TFHE-rs 提供业界领先的 FHE 运算性能，经过深度优化的 Rust 实现支持快速密文计算',
     },
     {
-      icon: <Database className={styles.featureIcon} />,
-      title: '生态导航',
-      description: '全景化展示生态 DApps 与项目，便于开发者快速了解与参与',
+      icon: <Code className={styles.featureIcon} />,
+      title: '完整工具链',
+      description: '从 Rust（TFHE-rs）、Python（Concrete / Concrete ML）到 Solidity（fhEVM），覆盖全场景 FHE 开发',
     },
   ];
 
@@ -172,7 +172,7 @@ export default function Home() {
             className={`${styles.heroContent} ${isVisible ? styles.heroVisible : ''}`}
           >
             <h1 className={styles.heroTitle}>
-              <span className={styles.heroTitleSecondary}>DevPlaza</span>
+              <span className={styles.heroTitleSecondary}>Zama 中文社区</span>
             </h1>
 
             <div className={styles.titleDecoration}>
@@ -181,7 +181,7 @@ export default function Home() {
             </div>
             <p className={styles.heroSubtitle}>
               <span className={styles.heroHighlight}>
-                聚合 Web3 活动 · 社区 · 文章 · 数据 —— 开发者的一站式广场
+                探索全同态加密 · 构建隐私应用 · 共建 Web3 隐私生态
               </span>
             </p>
 
@@ -195,11 +195,11 @@ export default function Home() {
               </button>
 
               <div className={styles.galleryContainer}>
-                {/* 示例图片，可替换为 DevPlaza 相关活动图 */}
+                {/* 示例图片，可替换为 Zama 社区活动图 */}
                 <div className={styles.galleryImage}>
-                  <Image 
-                    src="/community/cp1.jpg" 
-                    alt="DevPlaza 活动1" 
+                  <Image
+                    src="/community/cp1.jpg"
+                    alt="Zama 社区活动1"
                     width={300}
                     height={195}
                     style={{ borderRadius: '14px' }}
@@ -207,9 +207,9 @@ export default function Home() {
                   />
                 </div>
                 <div className={styles.galleryImage}>
-                  <Image 
-                    src="/community/cp2.jpg" 
-                    alt="DevPlaza 活动2" 
+                  <Image
+                    src="/community/cp2.jpg"
+                    alt="Zama 社区活动2"
                     width={300}
                     height={195}
                     style={{ borderRadius: '14px' }}
@@ -228,9 +228,9 @@ export default function Home() {
             </div>
 
             <div className={styles.heroButtons}>
-              <Link href="/about" className={styles.heroPrimaryButton}>
+              <Link href="https://zama.ai" target="_blank" className={styles.heroPrimaryButton}>
                 <Globe className={styles.buttonIcon} />
-                了解 DevPlaza
+                了解 Zama
               </Link>
               <Link href="/events" className={styles.heroSecondaryButton}>
                 <Users className={styles.buttonIcon} />
@@ -248,7 +248,7 @@ export default function Home() {
       <section className={styles.milestones}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>DevPlaza 里程碑</h2>
+            <h2 className={styles.sectionTitle}>Zama 里程碑</h2>
           </div>
         </div>
       </section>
@@ -257,9 +257,9 @@ export default function Home() {
       <section className={styles.features}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>核心功能</h2>
+            <h2 className={styles.sectionTitle}>核心技术</h2>
             <p className={styles.sectionDescription}>
-              DevPlaza 通过整合 Web3 多链数据、活动与社区内容，为开发者提供高效的一站式体验
+              Zama 以全同态加密（FHE）为核心，为区块链隐私计算提供完整的工具链与技术栈，让开发者轻松构建隐私应用
             </p>
           </div>
           <div className={styles.featuresGrid}>
@@ -288,29 +288,29 @@ export default function Home() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>学习资源</h2>
             <p className={styles.sectionDescription}>
-              通过教程、文章和文档，帮助开发者从 Web2 快速转型 Web3
+              通过文档、教程和示例代码，快速掌握 FHE 技术，探索 Zama 生态
             </p>
           </div>
           <div className={styles.resourcesGrid}>
             <div className={styles.resourceCard}>
               <BookOpen className={styles.resourceIcon} />
-              <h3 className={styles.resourceTitle}>教程</h3>
+              <h3 className={styles.resourceTitle}>开发文档</h3>
               <p className={styles.resourceDesc}>
-                系统学习如何从零开始构建 Web3 应用
+                完整的 Zama FHE 技术文档，包括 TFHE-rs、fhEVM 和 Concrete 的 API 参考
               </p>
             </div>
             <div className={styles.resourceCard}>
               <Code className={styles.resourceIcon} />
-              <h3 className={styles.resourceTitle}>代码示例</h3>
+              <h3 className={styles.resourceTitle}>教程与示例</h3>
               <p className={styles.resourceDesc}>
-                参考开源项目，快速掌握最佳实践
+                从零开始学习 FHE，丰富的代码示例帮助你快速上手隐私应用开发
               </p>
             </div>
             <div className={styles.resourceCard}>
               <Globe className={styles.resourceIcon} />
-              <h3 className={styles.resourceTitle}>生态导航</h3>
+              <h3 className={styles.resourceTitle}>生态项目</h3>
               <p className={styles.resourceDesc}>
-                全景化了解最新的 Web3 发展与项目
+                探索基于 Zama FHE 技术构建的隐私 DApp 生态，发现前沿隐私计算应用
               </p>
             </div>
           </div>
@@ -324,22 +324,22 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaTitle}>
-              加入 DevPlaza · 见证你的 Web3 成长之路
+              加入 Zama 中文社区 · 探索 FHE 的无限可能
             </h2>
             <p className={styles.ctaDesc}>
-              无论你是 Web2 开发者，还是已经投身 Web3，
-              DevPlaza 都为你提供最全面的资源与舞台。
+              无论你是密码学研究者，还是 Web3 开发者，
+              Zama 中文社区都为你提供最前沿的 FHE 技术资源与交流平台。
             </p>
             <div className={styles.ctaButtons}>
-              <Link href="/signup" className={styles.ctaPrimaryButton}>
+              <Link href="/events" className={styles.ctaPrimaryButton}>
                 <Rocket className={styles.buttonIcon} />
-                立即开始
+                立即加入
               </Link>
-              <Link href="/community" className={styles.ctaSecondaryButton}>
+              <Link href="https://t.me/zamacn" target="_blank" className={styles.ctaSecondaryButton}>
                 <SiTelegram className={styles.buttonIcon} />
                 加入 Telegram
               </Link>
-              <Link href="https://x.com/devplaza" className={styles.ctaSecondaryButton}>
+              <Link href="https://x.com/zama_fhe" target="_blank" className={styles.ctaSecondaryButton}>
                 <SiX className={styles.buttonIcon} />
                 关注 X
               </Link>
