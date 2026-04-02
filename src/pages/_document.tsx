@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="zh-CN">
       <Head>
         {/* OpenGraph Meta Tags */}
         <meta property="og:title" content="Zama 中文社区" />
@@ -16,7 +16,7 @@ export default function Document() {
         <meta property="og:site_name" content="Zama 中文社区" />
 
       </Head>
-      <body>
+      <body style={{ backgroundColor: '#ffffff' }}>
         <Main />
         <NextScript />
       </body>

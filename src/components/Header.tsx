@@ -89,8 +89,7 @@ export default function Header() {
             <Dropdown
               menu={{
                 items: [
-                  { key: 'dapps', label: <Link href="/ecosystem/dapps"> Dapps 列表 </Link> },
-                  { key: 'tutorials', label: <Link href="/ecosystem/tutorials"> 交互教程 </Link> },
+                  { key: 'dapps', label: <Link href="/ecosystem/dapps">Dapps 列表</Link> },
                 ],
               }}
               placement="bottom"
@@ -104,9 +103,14 @@ export default function Header() {
             <Dropdown
               menu={{
                 items: [
-                  { key: 'docs', label: <Link href="/docs">开发文档</Link> },
+                  { key: 'docs', label: <Link href="/docs">中文开发文档</Link> },
+                  { type: 'divider' },
+                  { key: 'quickstart', label: <Link href="/docs/protocol/quick-start">Protocol 快速入门</Link> },
+                  { key: 'solidity', label: <Link href="/docs/protocol/fhevm-contract">FHEVM 合约开发</Link> },
+                  { key: 'relayer', label: <Link href="/docs/protocol/relayer-sdk">Relayer SDK 指引</Link> },
+                  { type: 'divider' },
+                  { key: 'examples', label: <Link href="/docs/examples/overview">实战示例</Link> },
                   { key: 'guides', label: <Link href="https://docs.zama.ai" target="_blank">Zama 官方文档</Link> },
-                  { key: 'codes', label: <Link href="https://github.com/zama-ai" target="_blank">示例代码</Link> },
                 ],
               }}
               placement="bottom"
@@ -139,6 +143,10 @@ export default function Header() {
               menu={{
                 items: [
                   { key: 'blog', label: <Link href="/blogs">博客</Link> },
+                  { key: 'litepaper', label: <Link href="https://docs.zama.ai/protocol" target="_blank">Protocol Litepaper</Link> },
+                  { type: 'divider' },
+                  { key: 'forum', label: <Link href="https://community.zama.ai" target="_blank">Community Forum</Link> },
+                  { key: 'discord', label: <Link href="https://discord.com/invite/zama" target="_blank">Discord</Link> },
                 ],
               }}
               placement="bottom"
@@ -192,17 +200,9 @@ export default function Header() {
           <div className={styles.mobileMenuSection}>
             <h3 className={styles.mobileMenuSectionTitle}>生态系统</h3>
             <div className={styles.mobileMenuLinks}>
-              <Link href="/testnet" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
-                <span>🧪</span>
-                <span>了解测试网</span>
-              </Link>
               <Link href="/ecosystem/dapps" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>🏗️</span>
                 <span>Dapps 列表</span>
-              </Link>
-              <Link href="/ecosystem/tutorials" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
-                <span>📚</span>
-                <span>交互教程</span>
               </Link>
             </div>
           </div>
@@ -212,15 +212,27 @@ export default function Header() {
             <div className={styles.mobileMenuLinks}>
               <Link href="/docs" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>📖</span>
-                <span>开发文档</span>
+                <span>中文开发文档</span>
+              </Link>
+              <Link href="/docs/protocol/quick-start" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>🚀</span>
+                <span>Protocol 快速入门</span>
+              </Link>
+              <Link href="/docs/protocol/fhevm-contract" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>📝</span>
+                <span>FHEVM 合约开发</span>
+              </Link>
+              <Link href="/docs/protocol/relayer-sdk" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>🔗</span>
+                <span>Relayer SDK 指引</span>
+              </Link>
+              <Link href="/docs/examples/overview" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>💡</span>
+                <span>实战示例</span>
               </Link>
               <Link href="https://docs.zama.ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>⚙️</span>
                 <span>Zama 官方文档</span>
-              </Link>
-              <Link href="https://github.com/zama-ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
-                <span>💻</span>
-                <span>示例代码</span>
               </Link>
             </div>
           </div>
@@ -240,12 +252,12 @@ export default function Header() {
                 <span>💬</span>
                 <span>AMA</span>
               </Link>
-
               <Link href="/events?type=meetup" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>🤝</span>
                 <span>社区聚会</span>
               </Link>
               <Link href="/posts" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>📌</span>
                 <span>社区帖子</span>
               </Link>
             </div>
@@ -257,6 +269,18 @@ export default function Header() {
               <Link href="/blogs" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>📝</span>
                 <span>博客</span>
+              </Link>
+              <Link href="https://docs.zama.ai/protocol" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>📄</span>
+                <span>Protocol Litepaper</span>
+              </Link>
+              <Link href="https://community.zama.ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>🌐</span>
+                <span>Community Forum</span>
+              </Link>
+              <Link href="https://discord.com/invite/zama" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>💬</span>
+                <span>Discord</span>
               </Link>
             </div>
           </div>

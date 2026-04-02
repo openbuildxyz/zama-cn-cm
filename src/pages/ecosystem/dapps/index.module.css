@@ -1,11 +1,11 @@
 .container {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #faf5ff, #e1dbfe);
+  background: linear-gradient(to bottom right, #fffdf0, #f9fafb);
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #6366f1 0%, #6366f1 50%, #c084fc 100%);
+  background: linear-gradient(135deg, #1f2937 0%, #374151 60%, #1f2937 100%);
   padding: 4rem 0;
   color: white;
 }
@@ -170,8 +170,8 @@
 
 .searchInput:focus {
   outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: #FFCE44;
+  box-shadow: 0 0 0 3px rgba(255, 206, 68, 0.15);
 }
 
 .categoryFilters {
@@ -194,15 +194,15 @@
 }
 
 .categoryButton:hover {
-  border-color: var(--category-color, #6366f1);
-  color: var(--category-color, #6366f1);
+  border-color: var(--category-color, #FFCE44);
+  color: var(--category-color, #1f2937);
   transform: translateY(-1px);
 }
 
 .categoryButton.active {
-  background: var(--category-color, #6366f1);
-  border-color: var(--category-color, #6366f1);
-  color: white;
+  background: var(--category-color, #FFCE44);
+  border-color: var(--category-color, #FFCE44);
+  color: #1f2937;
 }
 
 /* Results Section */
@@ -337,9 +337,9 @@
 }
 
 .tag {
-  color: #6366f1;
+  color: #1f2937;
   padding: 2px 6px;
-  border-color: #6366f1;
+  border-color: #FFCE44;
   border-radius: 4px;
   font-size: 12px;
   line-height: 1;
@@ -364,12 +364,12 @@
 .tutorialsButton {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #6366f1;
+  color: #1f2937;
   text-decoration: none;
 }
 
 .tutorialsButton:hover {
-  color: #6366f1;
+  color: #d4a017;
   font-size: 0.9rem;
 }
 
@@ -412,7 +412,7 @@
   width: 32px;
   height: 32px;
   border: 3px solid #f3f4f6;
-  border-top: 3px solid #6366f1;
+  border-top: 3px solid #FFCE44;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

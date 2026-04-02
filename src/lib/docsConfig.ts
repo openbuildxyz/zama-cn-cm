@@ -18,6 +18,15 @@ export interface DocCategory {
 
 const docsCategories: DocCategory[] = [
   {
+    id: 'protocol',
+    title: 'Protocol 开发指南',
+    docs: [
+      { slug: 'protocol/quick-start', title: '快速入门教程' },
+      { slug: 'protocol/fhevm-contract', title: '改造为 FHEVM 合约' },
+      { slug: 'protocol/relayer-sdk', title: 'Relayer SDK 使用指南' },
+    ],
+  },
+  {
     id: 'introduction',
     title: '入门介绍',
     docs: [
@@ -55,6 +64,16 @@ const docsCategories: DocCategory[] = [
     docs: [
       { slug: 'concrete-ml/overview', title: '概述' },
       { slug: 'concrete-ml/quick-start', title: '快速入门' },
+    ],
+  },
+  {
+    id: 'examples',
+    title: '实战示例',
+    docs: [
+      { slug: 'examples/overview', title: '示例概览' },
+      { slug: 'examples/fhe-counter', title: 'FHE 计数器' },
+      { slug: 'examples/sealed-bid-auction', title: '密封竞价拍卖' },
+      { slug: 'examples/confidential-token', title: '保密代币 ERC7984' },
     ],
   },
 ];
