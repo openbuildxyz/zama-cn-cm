@@ -249,6 +249,143 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Zama 里程碑</h2>
+            <p className={styles.sectionDescription}>
+              从密码学研究室到全球首家 FHE 独角兽，Zama 正在重新定义区块链隐私计算的边界
+            </p>
+          </div>
+          <div className={styles.timeline}>
+            <div className={styles.timelineLine}></div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneLeft}`}>
+              <div className={styles.milestoneIcon}><Rocket size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2020年1月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>Zama 正式成立</h3>
+                <p className={styles.milestoneDescription}>
+                  Rand Hindi 与密码学先驱 Pascal Paillier 联合创立 Zama。Pascal Paillier 于 1999 年发明了 Paillier 密码系统，是 FHE 领域奠基人之一。Rand Hindi 此前创立隐私 AI 公司 Snips 并被 Sonos 收购。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneRight}`}>
+              <div className={styles.milestoneIcon}><Handshake size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2022年1月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>与 Protocol Labs 达成战略合作</h3>
+                <p className={styles.milestoneDescription}>
+                  Zama 与 Protocol Labs（Filecoin 母公司）建立战略合作，联合探索 FHE 在去中心化存储与保密智能合约领域的落地应用，Filecoin 创始人 Juan Benet 成为重要支持者。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneLeft}`}>
+              <div className={styles.milestoneIcon}><Zap size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2023年9月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>fhEVM Alpha 版本发布</h3>
+                <p className={styles.milestoneDescription}>
+                  全球首个基于 FHE 的私有智能合约协议正式开源。开发者无需密码学背景，即可在以太坊 EVM 上用 Solidity 编写保密智能合约，交易数据与链上状态全程加密。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneRight}`}>
+              <div className={styles.milestoneIcon}><DollarSign size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2024年3月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>Series A 融资 7300 万美元</h3>
+                <p className={styles.milestoneDescription}>
+                  由 Multicoin Capital 和 Protocol Labs 领投，Gavin Wood（以太坊联创）、Anatoly Yakovenko（Solana 联创）、Juan Benet 等区块链先驱参投，成为当时 FHE 领域最大单笔融资。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneLeft}`}>
+              <div className={styles.milestoneIcon}><Star size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2025年6月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>Series B $5700 万，全球首个 FHE 独角兽 🦄</h3>
+                <p className={styles.milestoneDescription}>
+                  Pantera Capital 和 Blockchange Ventures 领投，估值突破 10 亿美元，总融资超 1.5 亿美元。Zama 成为全球 FHE 领域首家独角兽，同步发布 Zama 保密区块链协议。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneRight}`}>
+              <div className={styles.milestoneIcon}><ServerCog size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2025年7月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>保密区块链协议测试网上线</h3>
+                <p className={styles.milestoneDescription}>
+                  Zama Protocol 公开测试网正式启动，FHE 运算速度相比创立之初提升 100 倍，已可支持大多数链上支付场景，开发者可在以太坊上直接部署保密 DApp。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneLeft}`}>
+              <div className={styles.milestoneIcon}><ShieldCheck size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2025年9月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>与 OpenZeppelin 联合制定 ERC-7984 标准</h3>
+                <p className={styles.milestoneDescription}>
+                  Zama、OpenZeppelin 与 Inco 共同创立保密代币协会，推出 ERC-7984 保密代币标准，为保密 DeFi、RWA 代币化和机构级隐私合规提供行业基础设施。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneRight}`}>
+              <div className={styles.milestoneIcon}><Network size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2025年11月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>战略收购 KKRT Labs（Kakarot ZK）</h3>
+                <p className={styles.milestoneDescription}>
+                  收购 Vitalik Buterin 投资的 ZK Rollup 研究团队 KKRT Labs，整合零知识证明扩容技术，目标将链上保密交易吞吐量提升至每秒 10,000+ 笔。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneLeft}`}>
+              <div className={styles.milestoneIcon}><Globe size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2025年12月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>Zama Protocol 主网正式上线</h3>
+                <p className={styles.milestoneDescription}>
+                  以太坊主网正式支持保密智能合约部署，$ZAMA 代币开放质押，路线图覆盖其他 EVM 链（2026 H1）及 Solana（2026 H2），构建覆盖全链的隐私计算基础层。
+                </p>
+              </div>
+            </div>
+
+            <div className={`${styles.milestoneItem} ${styles.milestoneRight}`}>
+              <div className={styles.milestoneIcon}><Activity size={22} color="#1f2937" /></div>
+              <div className={styles.milestoneContent}>
+                <div className={styles.milestoneDate}>
+                  <span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2026年2月</span>
+                </div>
+                <h3 className={styles.milestoneTitle}>$ZAMA 代币 Binance 上市</h3>
+                <p className={styles.milestoneDescription}>
+                  $ZAMA 在 Binance 正式上线交易，公开代币认领窗口开放。$ZAMA 是 Zama Protocol 的原生代币，用于支付保密计算费用、质押节点和参与协议治理。
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
