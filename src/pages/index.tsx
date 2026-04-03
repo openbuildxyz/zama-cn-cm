@@ -185,47 +185,7 @@ export default function Home() {
               </span>
             </p>
 
-            <div className={styles.heroGallery}>
-              <button
-                className={`${styles.galleryNavigation} ${styles.galleryNavPrev}`}
-                onClick={() => scrollGallery('left')}
-                aria-label="Previous images"
-              >
-                <ChevronLeft className={styles.galleryNavIcon} />
-              </button>
-
-              <div className={styles.galleryContainer}>
-                {/* 示例图片，可替换为 Zama 社区活动图 */}
-                <div className={styles.galleryImage}>
-                  <Image
-                    src="/community/cp1.jpg"
-                    alt="Zama 社区活动1"
-                    width={300}
-                    height={195}
-                    style={{ borderRadius: '14px' }}
-                    preview={{ mask: false }}
-                  />
-                </div>
-                <div className={styles.galleryImage}>
-                  <Image
-                    src="/community/cp2.jpg"
-                    alt="Zama 社区活动2"
-                    width={300}
-                    height={195}
-                    style={{ borderRadius: '14px' }}
-                    preview={{ mask: false }}
-                  />
-                </div>
-              </div>
-
-              <button
-                className={`${styles.galleryNavigation} ${styles.galleryNavNext}`}
-                onClick={() => scrollGallery('right')}
-                aria-label="Next images"
-              >
-                <ChevronRight className={styles.galleryNavIcon} />
-              </button>
-            </div>
+            {/* heroGallery hidden until community photos are ready */}
 
             <div className={styles.heroButtons}>
               <Link href="https://zama.ai" target="_blank" className={styles.heroPrimaryButton}>

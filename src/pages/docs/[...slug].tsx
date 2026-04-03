@@ -2,6 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { useState, useEffect } from 'react';
 import fs from 'fs';
 import path from 'path';
+import { message } from 'antd';
 
 import { LeftSidebar } from '@/components/docs/LeftSidebar';
 import { RightSidebar } from '@/components/docs/RightSidebar';
@@ -116,6 +117,65 @@ export default function DocsPage({ content, slug, docsCategories, currentDocTitl
             </ol>
           </nav>
           
+          {/* Skills 分类显示原始 Markdown 链接 */}
+          {currentCategory === 'skills' && (() => {
+            const fileMap: Record<string, string> = {
+              'skills/overview': 'zama.md',
+              'skills/fhevm': 'zama-fhevm.md',
+              'skills/sdk': 'zama-sdk.md',
+              'skills/tfhers': 'zama-tfhers.md',
+            };
+            const filename = fileMap[slug];
+            if (!filename) return null;
+            const rawUrl = typeof window !== 'undefined'
+              ? `${window.location.origin}/skills/${filename}`
+              : `/skills/${filename}`;
+            return (
+              <div style={{
+                margin: '0 0 1.5rem',
+                padding: '0.875rem 1.25rem',
+                background: 'rgba(255,206,68,0.1)',
+                border: '1px solid rgba(255,206,68,0.4)',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.75rem',
+                flexWrap: 'wrap',
+              }}>
+                <span style={{ fontSize: '1.1rem' }}>🤖</span>
+                <span style={{ fontSize: '0.85rem', color: '#6b7280' }}>Raw Markdown（可直接提供给 AI Agent）：</span>
+                <code style={{
+                  flex: 1,
+                  fontSize: '0.82rem',
+                  background: '#f3f4f6',
+                  padding: '0.25rem 0.6rem',
+                  borderRadius: '4px',
+                  wordBreak: 'break-all',
+                  color: '#374151',
+                }}>{rawUrl}</code>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(rawUrl);
+                    message.success('链接已复制');
+                  }}
+                  style={{
+                    padding: '0.3rem 0.9rem',
+                    background: '#FFCE44',
+                    color: '#1f2937',
+                    border: 'none',
+                    borderRadius: '6px',
+                    cursor: 'pointer',
+                    fontSize: '0.82rem',
+                    fontWeight: 600,
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  复制链接
+                </button>
+              </div>
+            );
+          })()}
+
           <div className={styles.paper}>
             <div
               className={styles.prose}

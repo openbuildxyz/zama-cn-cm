@@ -110,6 +110,8 @@ export default function Header() {
                   { key: 'relayer', label: <Link href="/docs/protocol/relayer-sdk">Relayer SDK 指引</Link> },
                   { type: 'divider' },
                   { key: 'examples', label: <Link href="/docs/examples/overview">实战示例</Link> },
+                  { type: 'divider' },
+                  { key: 'skills', label: <Link href="/skills">🤖 AI Agent Skills</Link> },
                   { key: 'guides', label: <Link href="https://docs.zama.ai" target="_blank">Zama 官方文档</Link> },
                 ],
               }}
@@ -229,6 +231,10 @@ export default function Header() {
               <Link href="/docs/examples/overview" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>💡</span>
                 <span>实战示例</span>
+              </Link>
+              <Link href="/skills" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>🤖</span>
+                <span>AI Agent Skills</span>
               </Link>
               <Link href="https://docs.zama.ai" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>⚙️</span>
