@@ -1266,258 +1266,221 @@
   transform: translateY(-1px);
 }
 
-/* Milestones Section */
+/* Milestones Section - Horizontal Timeline */
 .milestones {
-  padding: 5rem 1rem;
+  padding: 4rem 0 3rem;
   background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  overflow: hidden;
 }
 
+/* 横向可滚动容器 */
 .timeline {
-  position: relative;
-  max-width: 64rem;
-  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0 3rem 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 206, 68, 0.6) #f3f4f6;
 }
 
+.timeline::-webkit-scrollbar {
+  height: 5px;
+}
+.timeline::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+.timeline::-webkit-scrollbar-thumb {
+  background: #FFCE44;
+  border-radius: 3px;
+}
+
+/* flex 横排轨道 */
+.timelineTrack {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  min-width: max-content;
+}
+
+/*
+  横线穿过所有 icon 圆心：
+  - 卡片区高度 CARD_H = 190px
+  - icon 高度 = 48px，圆心偏移 = 24px
+  => top = 190 + 24 = 214px
+*/
 .timelineLine {
   position: absolute;
-  left: 2rem;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: linear-gradient(to bottom,
-      #FFCE44 0%,
-      #F5A623 35%,
-      #F5A623 65%,
-      #FFCE44 100%);
-  border-radius: 3px;
-  box-shadow: 0 0 16px rgba(255, 206, 68, 0.25);
+  left: 0;
+  right: 0;
+  top: 214px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #FFCE44 2%,
+    #F5A623 50%,
+    #FFCE44 98%,
+    transparent 100%
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 14px rgba(255, 206, 68, 0.28);
+  z-index: 1;
 }
 
-@media (min-width: 768px) {
-  .timelineLine {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
+/* 每个里程碑列 */
 .milestoneItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  flex-shrink: 0;
   position: relative;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+/* 空白占位块，撑起对侧高度 */
+.milestoneSpacer {
+  height: 190px;
+  flex-shrink: 0;
+}
+
+/* TOP：卡片在上，图标在中，占位在下 */
+.milestoneTop .milestoneContent {
+  order: 1;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  margin: 0;
+  text-align: center;
+}
+.milestoneTop .milestoneIcon  { order: 2; }
+.milestoneTop .milestoneSpacer { order: 3; }
+
+/* BOTTOM：占位在上，图标在中，卡片在下 */
+.milestoneBottom .milestoneSpacer { order: 1; }
+.milestoneBottom .milestoneIcon   { order: 2; }
+.milestoneBottom .milestoneContent {
+  order: 3;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* 图标圆点 */
+.milestoneIcon {
+  position: relative;
+  left: auto;
+  transform: none;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFCE44 0%, #F5A623 100%);
   display: flex;
   align-items: center;
-  margin-bottom: 4rem;
-  flex-direction: row;
+  justify-content: center;
+  box-shadow:
+    0 4px 12px rgba(255, 206, 68, 0.25),
+    inset 0 1px 3px rgba(255, 255, 255, 0.4);
+  z-index: 10;
+  border: 3px solid #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .milestoneLeft {
-    flex-direction: row;
-  }
-
-  .milestoneRight {
-    flex-direction: row-reverse;
-  }
+.milestoneItem:hover .milestoneIcon {
+  transform: scale(1.12);
+  box-shadow: 0 6px 20px rgba(255, 206, 68, 0.4);
 }
 
-.milestoneContent {
-  flex: 1;
-  margin-left: 6rem;
-  padding: 1.5rem 0;
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .milestoneLeft .milestoneContent {
-    margin-left: 0;
-    margin-right: 4rem;
-    text-align: right;
-  }
-
-  .milestoneRight .milestoneContent {
-    margin-left: 4rem;
-    margin-right: 0;
-    text-align: left;
-  }
-}
-
+/* 日期徽章 */
 .milestoneDate {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-@media (min-width: 768px) {
-  .milestoneLeft .milestoneDate {
-    justify-content: flex-end;
-  }
-
-  .milestoneRight .milestoneDate {
-    justify-content: flex-start;
-  }
+  justify-content: center;
+  margin-bottom: 0.5rem;
 }
 
 .milestoneDateBadge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #FFCE44;
+  gap: 0.35rem;
+  color: #d4a017;
   font-weight: 600;
-  font-size: 0.875rem;
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.08), rgba(99, 102, 241, 0.06));
-  padding: 0.4rem 1rem;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 206, 68, 0.15);
-  backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.08);
+  font-size: 0.75rem;
+  background: rgba(255, 206, 68, 0.08);
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 206, 68, 0.2);
+  white-space: nowrap;
 }
 
 .milestoneDateIcon {
-  width: 1rem;
-  height: 1rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
+/* 标题 */
 .milestoneTitle {
-  font-size: 1.3rem;
+  font-size: 0.875rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 0.8rem;
-  transition: all 0.3s ease;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  transition: color 0.2s ease;
 }
 
 .milestoneContent:hover .milestoneTitle {
-  color: #FFCE44;
+  color: #d4a017;
 }
 
-.milestoneContent:hover .milestoneDescription {
-  color: #374151;
-}
-
+/* 描述 */
 .milestoneDescription {
   color: #6b7280;
-  line-height: 1.65;
-  font-size: 1rem;
-  max-width: 420px;
-  margin: 0 auto;
-  transition: all 0.3s ease;
-  letter-spacing: 0.01em;
-  position: relative;
-  z-index: 2;
+  line-height: 1.55;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* 根据左右布局分别设置描述文字对齐 */
-.milestoneLeft .milestoneDescription {
-  text-align: right;
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.milestoneRight .milestoneDescription {
-  text-align: left;
-  margin-left: 0;
-  margin-right: auto;
-}
-
-.milestoneIcon {
-  position: absolute;
-  left: 2rem;
-  transform: translateX(-50%);
-  width: 4.2rem;
-  height: 4.2rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFCE44 0%, #F5A623 50%, #F5A623 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-  box-shadow:
-    0 8px 16px rgba(255, 206, 68, 0.15),
-    0 2px 8px rgba(255, 206, 68, 0.1),
-    inset 0 1px 3px rgba(255, 255, 255, 0.3);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 10;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(8px);
-}
-
-@media (min-width: 768px) {
-  .milestoneIcon {
-    left: 50%;
-  }
-}
-
-.milestoneIconContent {
-  position: relative;
-  display: flex;
-  z-index: 2;
-  color: white;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
-  transition: all 0.3s ease;
-}
-
-.milestoneIconGlow {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #FFCE44, #FFCE44);
-  filter: blur(10px);
-  opacity: 0.5;
-  animation: pulse 3s infinite;
-}
-
-.milestoneItem:hover .milestoneIcon {
-  transform: translateX(-50%) scale(1.05);
-  box-shadow:
-    0 12px 24px rgba(255, 206, 68, 0.2),
-    0 4px 12px rgba(255, 206, 68, 0.15),
-    inset 0 2px 4px rgba(255, 255, 255, 0.3);
-}
-
-.milestoneItem:hover .milestoneIconContent {
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transform: scale(1.02);
-}
-
-.milestoneDateBadge:hover {
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.12), rgba(99, 102, 241, 0.1));
-  border-color: rgba(255, 206, 68, 0.25);
-  transform: scale(1.02);
-  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.12);
-}
-
+/* 移动端降级为竖向卡片滚动 */
 @media (max-width: 767px) {
+  .timeline {
+    padding: 0 1rem 1.5rem;
+  }
+
   .milestoneItem {
-    flex-direction: row !important;
+    width: 180px;
+    padding: 0 0.6rem;
   }
 
-  .milestoneContent {
-    margin-left: 6rem !important;
-    margin-right: 0 !important;
+  .milestoneSpacer {
+    height: 160px;
   }
 
-  .milestoneContent::before {
-    left: -4rem !important;
-  }
-
-  .milestoneDate {
-    justify-content: flex-start !important;
+  .milestoneTop .milestoneContent,
+  .milestoneBottom .milestoneContent {
+    height: 160px;
   }
 
   .timelineLine {
-    left: 2rem;
+    top: 184px; /* 160 + 24 */
   }
 
-  .milestoneIcon {
-    left: 2rem;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.25rem;
+  .milestoneTitle {
+    font-size: 0.8rem;
+  }
+
+  .milestoneDescription {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 3;
   }
 }
 
