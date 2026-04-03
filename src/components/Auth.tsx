@@ -100,6 +100,9 @@ const Auth: React.FC = () => {
     },
   ];
 
+  // 登录入口暂时关闭，等待 OAuth 配置完成
+  if (!session?.user) return null;
+
   return (
     <div className={styles.auth}>
       {session?.user ? (
@@ -116,16 +119,7 @@ const Auth: React.FC = () => {
             </div>
           </Dropdown>
         </>
-      ) : (
-        <Button
-          type="primary"
-          className={styles.navButton}
-          onClick={handleSignIn}
-          loading={loading} // 显示加载中状态
-        >
-          登录
-        </Button>
-      )}
+      ) : null}
     </div>
   );
 };
