@@ -60,3 +60,10 @@ Thumbs.db
 
 config/config.yaml
 *config.yaml
+.vercel
+
+# devplaza sensitive files
+devplaza/config.yaml
+devplaza/devplaza
+devplaza/devplaza_bin
+devplaza/logs/
