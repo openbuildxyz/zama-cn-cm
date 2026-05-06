@@ -327,7 +327,110 @@ export default function Home() {
                 </div>
               </div>
 
+              {/* 11 - TOP */}
+              <div className={`${styles.milestoneItem} ${styles.milestoneTop}`}>
+                <div className={styles.milestoneContent}>
+                  <div className={styles.milestoneDate}><span className={styles.milestoneDateBadge}><Calendar className={styles.milestoneDateIcon} />2026年Q1</span></div>
+                  <h3 className={styles.milestoneTitle}>SHIELDED 报告发布</h3>
+                  <p className={styles.milestoneDescription}>Zama 成为史上最快达到 1 亿美元 TVS 的隐私协议，FHE 拍卖证明可扩展性。</p>
+                </div>
+                <div className={styles.milestoneIcon}><ShieldCheck size={18} color="#1f2937" /></div>
+                <div className={styles.milestoneSpacer}></div>
+              </div>
+
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SHIELDED Report Section */}
+      <section className={styles.shieldedReport}>
+        <div className={styles.container}>
+          <div className={`${styles.sectionHeader} ${styles.reportHeader}`}>
+            <span className={styles.reportEyebrow}>Q1 2026</span>
+            <h2 className={styles.reportTitle}>SHIELDED Q1 2026 报告</h2>
+            <p className={styles.reportSubtitle}>Zama — 链上金融的隐私层</p>
+          </div>
+
+          <div className={styles.reportStatsGrid}>
+            <div className={styles.reportStatCard}>
+              <strong>123M</strong>
+              <span>峰值隐私资产 (TVS)</span>
+            </div>
+            <div className={styles.reportStatCard}>
+              <strong>7,653</strong>
+              <span>位独立参与者</span>
+            </div>
+            <div className={styles.reportStatCard}>
+              <strong>14,600</strong>
+              <span>笔加密出价</span>
+            </div>
+            <div className={styles.reportStatCard}>
+              <strong>45%</strong>
+              <span>流通量已质押</span>
+            </div>
+            <div className={styles.reportStatCard}>
+              <strong>47.8%</strong>
+              <span>平均质押年化</span>
+            </div>
+            <div className={styles.reportStatCard}>
+              <strong>#1</strong>
+              <span>以太坊峰值应用</span>
+            </div>
+          </div>
+
+          <div className={styles.reportContentGrid}>
+            <div className={styles.reportSummary}>
+              <h3>隐私金融进入生产级阶段</h3>
+              <p>
+                Zama 在 3 天内成为最快突破 1 亿美元 TVS 的隐私协议，用公开以太坊上的加密拍卖证明：
+                隐私不再意味着低吞吐或低可用。FHE 工作负载仅占用约 4% 协议容量，却承载了约 30% 的以太坊区块空间需求，
+                展示出面向真实金融应用的扩展性。
+              </p>
+              <p>
+                协议基于格密码学构建，具备抗量子安全属性，并采用 NIST 认可方向的密码学基础，
+                为长期链上资产、机构交易和可合规隐私应用提供底层保障。
+              </p>
+            </div>
+
+            <div className={styles.reportHighlights}>
+              <h3>生态亮点</h3>
+              <div className={styles.highlightList}>
+                <div><span>T-REX</span><p>支持 100B 美元 RWA 场景的保密代币基础设施。</p></div>
+                <div><span>GSR</span><p>面向机构交易的 confidential OTC 方案。</p></div>
+                <div><span>Bron</span><p>首个链上 confidential payroll 应用。</p></div>
+                <div><span>TGBP</span><p>17% 资产进入 shielded 隐私状态。</p></div>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.roadmapPanel}>
+            <div className={styles.roadmapStep}>
+              <Globe className={styles.roadmapIcon} />
+              <span>ETH Mainnet</span>
+            </div>
+            <div className={styles.roadmapArrow}>→</div>
+            <div className={styles.roadmapStep}>
+              <Cpu className={styles.roadmapIcon} />
+              <span>GPU 100+ TPS</span>
+            </div>
+            <div className={styles.roadmapArrow}>→</div>
+            <div className={styles.roadmapStep}>
+              <Network className={styles.roadmapIcon} />
+              <span>More EVM + Solana</span>
+            </div>
+          </div>
+
+          <div className={styles.reportCtaWrap}>
+            <Link
+              href="https://cdn.prod.website-files.com/61bc21e3a843412266a08eb3/69f33f2384ca5551a60cb1c8_SHIELDED-Zama-Q126-Report.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.reportCta}
+            >
+              <BookOpen className={styles.buttonIcon} />
+              阅读完整报告
+            </Link>
           </div>
         </div>
       </section>

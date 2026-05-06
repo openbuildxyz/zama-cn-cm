@@ -1461,6 +1461,223 @@
   overflow: hidden;
 }
 
+/* SHIELDED Report Section */
+.shieldedReport {
+  padding: 5rem 1rem;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 210, 8, 0.16), transparent 28rem),
+    linear-gradient(135deg, #000000 0%, #2D2D2D 100%);
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.reportHeader {
+  margin-bottom: 2.5rem;
+}
+
+.reportEyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000;
+  background: #FFD208;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.reportTitle {
+  color: #FFFFFF;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.08;
+  margin: 0 0 0.75rem;
+}
+
+.reportSubtitle {
+  color: #FFD208;
+  font-size: clamp(1.1rem, 2.3vw, 1.6rem);
+  font-weight: 800;
+  margin: 0;
+}
+
+.reportStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reportStatCard {
+  min-height: 132px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 210, 8, 0.32);
+  border-radius: 8px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.reportStatCard strong {
+  color: #FFD208;
+  display: block;
+  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  line-height: 1;
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+}
+
+.reportStatCard span {
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.reportContentGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.reportSummary,
+.reportHighlights,
+.roadmapPanel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 210, 8, 0.22);
+  border-radius: 8px;
+  backdrop-filter: blur(12px);
+}
+
+.reportSummary,
+.reportHighlights {
+  padding: 2rem;
+}
+
+.reportSummary h3,
+.reportHighlights h3 {
+  color: #FFFFFF;
+  font-size: 1.45rem;
+  font-weight: 900;
+  margin: 0 0 1rem;
+}
+
+.reportSummary p {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.reportSummary p + p {
+  margin-top: 1rem;
+}
+
+.highlightList {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.highlightList div {
+  border-left: 3px solid #FFD208;
+  padding-left: 0.9rem;
+}
+
+.highlightList span {
+  display: block;
+  color: #FFD208;
+  font-weight: 900;
+  margin-bottom: 0.25rem;
+}
+
+.highlightList p {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.roadmapPanel {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+}
+
+.roadmapStep {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: rgba(0, 0, 0, 0.48);
+  border: 1px solid rgba(255, 210, 8, 0.22);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.9rem;
+}
+
+.roadmapIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #FFD208;
+  flex-shrink: 0;
+}
+
+.roadmapArrow {
+  color: #FFD208;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.reportCtaWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.reportCta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: #FFD208;
+  color: #000000 !important;
+  border-radius: 999px;
+  padding: 0.9rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(255, 210, 8, 0.28);
+  transition: all 0.25s ease;
+}
+
+.reportCta:hover {
+  background: #E6BC00;
+  color: #000000 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(255, 210, 8, 0.36);
+}
+
+@media (max-width: 1100px) {
+  .reportStatsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reportContentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* 移动端降级为竖向卡片滚动 */
 @media (max-width: 767px) {
   .timeline {
@@ -1492,6 +1709,32 @@
   .milestoneDescription {
     font-size: 0.75rem;
     -webkit-line-clamp: 3;
+  }
+
+  .shieldedReport {
+    padding: 3.5rem 1rem;
+  }
+
+  .reportStatsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reportContentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .reportSummary,
+  .reportHighlights {
+    padding: 1.35rem;
+  }
+
+  .roadmapPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmapArrow {
+    transform: rotate(90deg);
+    justify-self: center;
   }
 }
 
