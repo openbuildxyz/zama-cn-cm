@@ -61,7 +61,7 @@ export default function DappTutorialsPage() {
             中级: "#F59E0B",
             高级: "#EF4444",
         }
-        return colors[difficulty as keyof typeof colors] || "#6366F1"
+        return colors[difficulty as keyof typeof colors] || "#FFD208"
     }
 
     if (loading || !dapp) {
@@ -124,8 +124,8 @@ export default function DappTutorialsPage() {
                                     href={`/ecosystem/tutorials/new?dappId=${dapp.ID}`}
                                     className={`${styles.difficultyButton} ${styles.addTutorialButton}`}
                                     style={{
-                                        backgroundColor: "#8B5CF6",
-                                        borderColor: "#8B5CF6",
+                                        backgroundColor: "#FFD208",
+                                        borderColor: "#FFD208",
                                         color: "white",
                                         display: "flex",
                                         alignItems: "center",
@@ -145,8 +145,8 @@ export default function DappTutorialsPage() {
                                     style={
                                         selectedDifficulty === difficulty
                                             ? {
-                                                backgroundColor: difficulty === "全部" ? "#6366F1" : getDifficultyColor(difficulty),
-                                                borderColor: difficulty === "全部" ? "#6366F1" : getDifficultyColor(difficulty),
+                                                backgroundColor: difficulty === "全部" ? "#FFD208" : getDifficultyColor(difficulty),
+                                                borderColor: difficulty === "全部" ? "#FFD208" : getDifficultyColor(difficulty),
                                             }
                                             : {}
                                     }

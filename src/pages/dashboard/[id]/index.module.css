@@ -4,7 +4,7 @@
 }
 
 .header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FFD208 0%, #E6BC00 100%);
   padding: 140px 0 40px;
   /* 增加顶部padding为导航栏留出空间 */
   margin-bottom: 24px;
@@ -106,17 +106,17 @@
 }
 
 .navigationMenu .ant-menu-item:hover {
-  background: #f6f8ff !important;
-  color: #667eea !important;
+  background: #fffbe6 !important;
+  color: #FFD208 !important;
 }
 
 .navigationMenu .ant-menu-item-selected {
-  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  background: linear-gradient(135deg, #FFD208, #E6BC00) !important;
   color: white !important;
 }
 
 .navigationMenu .ant-menu-item-selected:hover {
-  background: linear-gradient(135deg, #667eea, #764ba2) !important;
+  background: linear-gradient(135deg, #FFD208, #E6BC00) !important;
   color: white !important;
 }
 
@@ -159,8 +159,8 @@
 
 .emptyState p {
   font-size: 14px;
-  color: #6E54FF;
-  border-color: #6E54FF;
+  color: #FFD208;
+  border-color: #FFD208;
   border-radius: 12px;
   padding: 1rem;
   margin-top: 20px;
@@ -186,13 +186,13 @@
 }
 
 .cardIcon {
-  color: #667eea;
+  color: #FFD208;
   width: 20px;
   height: 20px;
 }
 
 .viewAllButton {
-  color: #667eea !important;
+  color: #FFD208 !important;
   font-weight: 500 !important;
   padding: 0 !important;
   height: auto !important;
@@ -200,7 +200,7 @@
 }
 
 .viewAllButton:hover {
-  color: #764ba2 !important;
+  color: #E6BC00 !important;
   transform: translateX(2px);
 }
 
@@ -226,7 +226,7 @@
 }
 
 .itemTitle:hover {
-  color: #667eea !important;
+  color: #FFD208 !important;
 }
 
 .itemDescription {
@@ -295,9 +295,9 @@
 }
 
 .itemTag {
-  background: #f6f8ff !important;
-  border: 1px solid #e6ebff !important;
-  color: #667eea !important;
+  background: #fffbe6 !important;
+  border: 1px solid #fff8cc !important;
+  color: #FFD208 !important;
   font-size: 12px !important;
   padding: 2px 8px !important;
   border-radius: 4px !important;
@@ -343,7 +343,7 @@
 
 .postDescription a {
   pointer-events: none;
-  color: #8b5cf6;
+  color: #FFD208;
   cursor: default;
 }
 

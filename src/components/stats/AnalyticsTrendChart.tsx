@@ -32,7 +32,7 @@ export function AnalyticsTrendChart({ data }: AnalyticsTrendChartProps) {
     ctx.clearRect(0, 0, width, height);
 
     const metrics = ['pageViews', 'users', 'sessions'];
-    const colors = ['#3b82f6', '#f59e0b', '#ef4444'];
+    const colors = ['#2D2D2D', '#f59e0b', '#ef4444'];
 
     const maxValues = metrics.map((metric) =>
       Math.max(
@@ -187,7 +187,7 @@ export function AnalyticsTrendChart({ data }: AnalyticsTrendChartProps) {
                   className={styles.legendColor}
                   style={{
                     backgroundColor: [
-                      '#3b82f6',
+                      '#2D2D2D',
                       '#f59e0b',
                       '#ef4444',
                     ][index],
@@ -220,7 +220,7 @@ export function AnalyticsTrendChart({ data }: AnalyticsTrendChartProps) {
             <div className={styles.tooltipHeader}>{tooltip.date}</div>
             <div className={styles.tooltipContent}>
               <div className={styles.tooltipItem}>
-                <div className={styles.tooltipColor} style={{ backgroundColor: '#3b82f6' }}></div>
+                <div className={styles.tooltipColor} style={{ backgroundColor: '#2D2D2D' }}></div>
                 <span>页面浏览量: {tooltip.values.pageViews.toLocaleString()}</span>
               </div>
               <div className={styles.tooltipItem}>

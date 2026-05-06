@@ -36,8 +36,8 @@ export default function DateButton({
         active
           ? {
               ...buttonProps.style,
-              backgroundColor: '#6e54ff',
-              borderColor: '#6e54ff',
+              backgroundColor: '#FFD208',
+              borderColor: '#FFD208',
               color: 'white',
             }
           : {

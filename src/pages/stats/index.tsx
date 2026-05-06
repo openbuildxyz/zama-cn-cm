@@ -313,7 +313,7 @@ export default function StatsIndex() {
               newThisWeek={data.overview?.users.new_this_Week ?? 0}
               weeklyGrowth={data.overview?.users.weekly_growth ?? 0}
               icon={<Users className={styles.cardIconSvg} />}
-              color="#8b5cf6"
+              color="#FFD208"
             />
 
             <StatsCard
@@ -322,7 +322,7 @@ export default function StatsIndex() {
               newThisWeek={data.overview?.blogs.new_this_Week ?? 0}
               weeklyGrowth={data.overview?.blogs.weekly_growth ?? 0}
               icon={<BookOpen className={styles.cardIconSvg} />}
-              color="#06b6d4"
+              color="#2D2D2D"
             />
 
             <StatsCard
@@ -386,7 +386,7 @@ export default function StatsIndex() {
               title="页面浏览量"
               value={analyticsData.overview?.pageViews ?? 0}
               icon={<Eye className={styles.cardIconSvg} />}
-              color="#3b82f6"
+              color="#2D2D2D"
               trend={calculateTrend('pageViews', analyticsData)}
               tooltip={createPageViewsTooltip()}
               showDetails={getPageData().length > 0}
@@ -427,7 +427,7 @@ export default function StatsIndex() {
               value={analyticsData.overview?.bounceRate ?? 0}
               suffix="%"
               icon={<TrendingUpIcon className={styles.cardIconSvg} />}
-              color="#8b5cf6"
+              color="#FFD208"
               trend={calculateTrendForOverviewOnly('bounceRate', analyticsData)}
               description="GA4中的跳出率指标，计算非参与度会话的百分比，即参与度的反面。非参与会话指持续时间低于10秒、只有一个页面查看且未触发关键事件的会话。低跳出率表示高参与度。"
             />
@@ -439,7 +439,7 @@ export default function StatsIndex() {
               )}
               suffix="分钟"
               icon={<Clock className={styles.cardIconSvg} />}
-              color="#06b6d4"
+              color="#2D2D2D"
               trend={calculateTrendForOverviewOnly(
                 'avgSessionDuration',
                 analyticsData

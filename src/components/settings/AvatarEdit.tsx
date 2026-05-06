@@ -145,7 +145,7 @@ export default function AvatarEdit({
             right: 0,
             width: 24,
             height: 24,
-            backgroundColor: '#667eea',
+            backgroundColor: '#FFD208',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',

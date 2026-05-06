@@ -145,7 +145,7 @@ export default function BlogDetailPage() {
               {blog.publish_status === 1 && (
                 <div
                   className={styles.statusBadge}
-                  style={{ backgroundColor: '#af78e7' }}
+                  style={{ backgroundColor: '#FFD208' }}
                 >
                   待审核
                 </div>

@@ -965,8 +965,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(168, 85, 247, 0.2),
-      rgba(59, 130, 246, 0.2));
+      rgba(255, 210, 8, 0.2),
+      rgba(45, 45, 45, 0.2));
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -982,7 +982,7 @@
   display: inline-flex;
   padding: 0.75rem;
   border-radius: 50%;
-  background: #f3e8ff;
+  background: #fff8cc;
   color: #FFD208;
   transition: transform 0.3s ease;
 }
@@ -1149,8 +1149,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(168, 85, 247, 0.2),
-      rgba(59, 130, 246, 0.2));
+      rgba(255, 210, 8, 0.2),
+      rgba(45, 45, 45, 0.2));
   opacity: 0;
   transition: opacity 0.5s ease;
   border-radius: 1rem;
@@ -2455,7 +2455,7 @@
 
 .viewMoreButton {
   display: inline-block;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%);
   color: #fff;
   padding: 0.75rem 2rem;
   border-radius: 9999px;

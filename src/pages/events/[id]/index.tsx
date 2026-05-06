@@ -175,7 +175,7 @@ export default function EventDetailPage() {
     if (event.status === 0) {
       return { text: '即将开始', type: 'upcoming', color: '#10b981' };
     } else if (event.status === 1) {
-      return { text: '进行中', type: 'ongoing', color: '#3b82f6' };
+      return { text: '进行中', type: 'ongoing', color: '#2D2D2D' };
     } else {
       return { text: '已结束', type: 'ended', color: '#6b7280' };
     }
@@ -296,7 +296,7 @@ export default function EventDetailPage() {
               {event.publish_status === 1 && (
                 <div
                   className={styles.statusBadge}
-                  style={{ backgroundColor: '#af78e7' }}
+                  style={{ backgroundColor: '#FFD208' }}
                 >
                   待审核
                 </div>

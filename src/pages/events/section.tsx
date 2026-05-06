@@ -1,10 +1,9 @@
-import { Calendar, MapPin, Users, Video } from 'lucide-react';
+import { Calendar, MapPin, Video } from 'lucide-react';
 import Link from 'next/link';
 import styles from './section.module.css';
-import { Key, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getEvents } from '../api/event';
 import dayjs from 'dayjs';
-import { Tag } from 'antd';
 import { useAuth } from '@/contexts/AuthContext';
 
 export function formatTime(isoTime: string): string {
@@ -15,31 +14,14 @@ export function formatTime(isoTime: string): string {
 export default function EventSection() {
     // 使用统一的认证上下文，避免重复调用 useSession
     const { status } = useAuth();
-    const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc")
     const [events, setEvents] = useState<any[]>([])
 
-    const loadEvents = async (params?: {
-        keyword?: string
-        tag?: string
-        order?: "asc" | "desc"
-        page?: number
-        page_size?: number
-        status?: string | number
-        location?: string
-        event_mode?: string
-        publish_status?: number;
-    }) => {
+    const loadEvents = async () => {
         try {
             const queryParams = {
-                keyword: '',
-                tag: '',
-                order: sortOrder,
+                order: 'desc' as const,
                 page: 1,
                 page_size: 3,
-                status: 3,
-                location: '',
-                event_mode: '',
-                evnet_type: '',
                 publish_status: 2,
             }
 
@@ -71,6 +53,8 @@ export default function EventSection() {
         }
     }, [status])
 
+    const moreLink = events.length > 1 && events[0]?.ID ? `/events/${events[0].ID}` : '/events';
+
     return (
         <section className={styles.activities}>
             <div className={styles.container}>
@@ -85,30 +69,7 @@ export default function EventSection() {
                         <div key={index} className={styles.activityCard}>
                             <div className={styles.activityCardGlow}></div>
                             <div className={styles.activityCardHeader}>
-                                <div className={styles.activityMeta}>
-                                    <span
-                                        className={`${styles.activityBadge} ${event.status === 0
-                                            ? styles.activityBadgeInactive
-                                            : event.status === 1
-                                                ? styles.activityBadgeActive
-                                                : styles.activityBadgeEnded
-                                            }`}
-                                    >
-                                        {event.status === 0
-                                            ? '未开始'
-                                            : event.status === 1
-                                                ? '进行中'
-                                                : '已结束'}
-                                    </span>
-                                    {event.participants !== 0 &&
-                                        <div className={styles.activityParticipants}>
-                                            <Users className={styles.activityIcon} />
-                                            {event.participants}
-                                        </div>
-                                    }
-                                </div>
                                 <h3 className={styles.activityTitle}>{event.title}</h3>
-                                {/* <p className={styles.activityDescription}>{event.description}</p> */}
                             </div>
                             <div className={styles.activityCardContent}>
                                 <div className={styles.activityInfo}>
@@ -122,20 +83,9 @@ export default function EventSection() {
                                         ) : (
                                             <MapPin className={styles.activityIcon} />
                                         )}
-                                        {event.event_mode === "线上活动" ? "线上活动" : event.location }
+                                        {event.event_mode === "线上活动" ? "线上活动" : "线下活动"}
                                     </div>
                                 </div>
-                                {/* 标签展示区 */}
-                                {event.tags && event.tags.length > 0 && (
-                                    <div className={styles.tagsContainer}>
-                                        {event.tags.slice(0, 3).map((tag: string, index: number) => (
-                                            <Tag key={index} className={styles.tag}>
-                                                {tag}
-                                            </Tag>
-                                        ))}
-                                        {/* {event.tags.length > 3 && <Tag className={styles.moreTag}>+{event.tags.length - 3}</Tag>} */}
-                                    </div>
-                                )}
                                 <Link href={`/events/${event.ID}`} passHref>
                                     <button className={styles.activityButton}>了解详情</button>
                                 </Link>
@@ -144,7 +94,7 @@ export default function EventSection() {
                     ))}
                 </div>
                 <div className={styles.sectionFooter}>
-                    <Link href="/events">
+                    <Link href={moreLink}>
                         <button className={styles.moreButton}>
                             <Calendar className={styles.buttonIcon} />
                             查看更多活动

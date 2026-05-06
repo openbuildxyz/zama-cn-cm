@@ -1,6 +1,6 @@
 .container {
     min-height: 100vh;
-    background: linear-gradient(to bottom right, #faf5ff, #dbeafe);
+    background: linear-gradient(to bottom right, #fffbe6, #fff8cc);
     position: relative;
 }
 
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     height: 600px;
-    background: linear-gradient(to bottom right, #faf5ff, #dbeafe);
+    background: linear-gradient(to bottom right, #fffbe6, #fff8cc);
     opacity: 0.03;
     z-index: 0;
 }
@@ -48,7 +48,7 @@
     transform: translate(-50%, -50%);
     width: 600px;
     height: 300px;
-    background: radial-gradient(ellipse, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    background: radial-gradient(ellipse, rgba(255, 210, 8, 0.15) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .titleGradient {
-    background: linear-gradient(135deg, #6366F1 0%, #6E54FF 100%);
+    background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -88,15 +88,15 @@
 }
 
 .primaryButton {
-    background: linear-gradient(135deg, #6366F1 0%, #6E54FF 100%) !important;
+    background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%) !important;
     border: none !important;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(255, 210, 8, 0.3) !important;
     transition: all 0.3s ease !important;
 }
 
 .primaryButton:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 6px 20px rgba(255, 210, 8, 0.4) !important;
 }
 
 .secondaryButton {
@@ -107,9 +107,9 @@
 }
 
 .secondaryButton:hover {
-    border-color: #6366F1;
-    color: #6366F1;
-    background: rgba(139, 92, 246, 0.05);
+    border-color: #FFD208;
+    color: #FFD208;
+    background: rgba(255, 210, 8, 0.05);
 }
 
 .statusSection {
@@ -128,7 +128,7 @@
     height: 100%;
     position: relative;
     border-radius: 16px;
-    border: 1px solid rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(255, 210, 8, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     overflow: hidden;
@@ -142,7 +142,7 @@
     }
 
     .externalIcon:hover {
-        color: #6366F1;
+        color: #FFD208;
     }
 }
 
@@ -155,12 +155,12 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #6366F1, #6E54FF);
+    background: linear-gradient(90deg, #FFD208, #FFD208);
 }
 
 .statusCard:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.15);
+    box-shadow: 0 8px 30px rgba(255, 210, 8, 0.15);
 }
 
 .statusCardGreen::before {
@@ -168,11 +168,11 @@
 }
 
 .statusCardPurple::before {
-    background: linear-gradient(90deg, #6366F1, #6E54FF);
+    background: linear-gradient(90deg, #FFD208, #FFD208);
 }
 
 .statusCardBlue::before {
-    background: linear-gradient(90deg, #2D2D2D, #2563eb);
+    background: linear-gradient(90deg, #2D2D2D, #2D2D2D);
 }
 
 .statusCardOrange::before {
@@ -197,8 +197,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(139, 92, 246, 0.1);
-    color: #6366F1;
+    background: rgba(255, 210, 8, 0.1);
+    color: #FFD208;
     position: relative;
     z-index: 2;
 }
@@ -209,7 +209,7 @@
 }
 
 .statusCardBlue .statusIcon {
-    background: rgba(59, 130, 246, 0.1);
+    background: rgba(45, 45, 45, 0.1);
     color: #2D2D2D;
 }
 
@@ -219,8 +219,8 @@
 }
 
 .validatorTag {
-    border-color: #6366F1;
-    color: #6366F1;
+    border-color: #FFD208;
+    color: #FFD208;
     font-size: 10px;
 }
 
@@ -262,13 +262,13 @@
 .infoCard {
     height: 100%;
     border-radius: 16px;
-    border: 1px solid rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(255, 210, 8, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
 }
 
 .infoCard:hover {
-    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.1);
+    box-shadow: 0 8px 30px rgba(255, 210, 8, 0.1);
 }
 
 .cardHeader {
@@ -285,15 +285,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #6366F1, #6E54FF);
+    background: linear-gradient(135deg, #FFD208, #FFD208);
     color: white;
 }
 
 .infoItem {
     padding: 10px;
     border-radius: 12px;
-    background: rgba(139, 92, 246, 0.02);
-    border: 1px solid rgba(139, 92, 246, 0.05);
+    background: rgba(255, 210, 8, 0.02);
+    border: 1px solid rgba(255, 210, 8, 0.05);
 }
 
 .infoItemHeader {
@@ -301,7 +301,7 @@
     align-items: center;
     gap: 8px;
     margin-bottom: 12px;
-    color: #6366F1;
+    color: #FFD208;
 }
 
 .phaseText {
@@ -309,7 +309,7 @@
 }
 
 .phaseTime {
-    color: #6366F1;
+    color: #FFD208;
 }
 
 .launchInfo {
@@ -321,7 +321,7 @@
 .launchDate {
     font-size: 16px;
     font-weight: 600;
-    color: #6366F1;
+    color: #FFD208;
 }
 
 .phaseTag {
@@ -396,27 +396,27 @@
 }
 
 .copyButton:hover {
-    border-color: #6366F1;
-    color: #6366F1;
+    border-color: #FFD208;
+    color: #FFD208;
 }
 
 .walletButton {
-    background: linear-gradient(135deg, #6366F1 0%, #6E54FF 100%) !important;
+    background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%) !important;
     border: none !important;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3) !important;
+    box-shadow: 0 4px 15px rgba(255, 210, 8, 0.3) !important;
     transition: all 0.3s ease !important;
     margin-top: 8px;
 }
 
 .walletButton:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4) !important;
+    box-shadow: 0 6px 20px rgba(255, 210, 8, 0.4) !important;
 }
 
 .faucetCard {
     margin-bottom: 48px;
     border-radius: 16px;
-    border: 1px solid rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(255, 210, 8, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -428,14 +428,14 @@
 }
 
 .faucetItem:hover {
-    border-color: #6366F1;
-    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.1);
+    border-color: #FFD208;
+    box-shadow: 0 4px 15px rgba(255, 210, 8, 0.1);
     transform: translateY(-2px);
 }
 
 .faucetItemRecommended {
     border-color: #2D2D2D;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), rgba(59, 130, 246, 0.01));
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.02), rgba(45, 45, 45, 0.01));
 }
 
 .faucetContent {
@@ -463,8 +463,8 @@
     border-radius: 12px;
     font-size: 10px;
     font-weight: 500;
-    color: #6366F1;
-    border-color: #6366F1;
+    color: #FFD208;
+    border-color: #FFD208;
 }
 
 .communityTag,
@@ -475,7 +475,7 @@
 }
 
 .faucetButton {
-    background: #6366F1 !important;
+    background: #FFD208 !important;
     border: none !important;
     margin-top: 10px;
     border-radius: 8px !important;
@@ -493,14 +493,14 @@
 }
 
 .faucetButtonSecondary:hover {
-    border-color: #6366F1;
-    color: #6366F1;
+    border-color: #FFD208;
+    color: #FFD208;
 }
 
 .ecosystemCard {
     margin-bottom: 48px;
     border-radius: 16px;
-    border: 1px solid rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(255, 210, 8, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
@@ -512,8 +512,8 @@
 }
 
 .projectCard:hover {
-    border-color: #6366F1;
-    box-shadow: 0 6px 25px rgba(139, 92, 246, 0.15);
+    border-color: #FFD208;
+    box-shadow: 0 6px 25px rgba(255, 210, 8, 0.15);
     transform: translateY(-4px);
 }
 
@@ -572,12 +572,12 @@
     font-size: 11px;
     padding: 0;
     height: auto;
-    color: #6366F1;
+    color: #FFD208;
 }
 
 .ctaSection {
     margin: 60px calc(-50vw + 50%) 0 calc(-50vw + 50%);
-    background: linear-gradient(135deg, #6366F1 0%, #6E54FF 50%, #4338CA 100%);
+    background: linear-gradient(135deg, #FFD208 0%, #FFD208 50%, #E6BC00 100%);
     padding: 80px 24px;
     position: relative;
     overflow: hidden;
@@ -676,7 +676,7 @@
 .ctaWhiteButton {
     background: white !important;
     border: none !important;
-    color: #6366F1 !important;
+    color: #FFD208 !important;
     font-weight: 500 !important;
     padding: 0 32px !important;
     height: 48px !important;
@@ -687,7 +687,7 @@
 
 .ctaWhiteButton:hover {
     background: #F4F4F4 !important;
-    color: #6E54FF !important;
+    color: #FFD208 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
 }
@@ -946,12 +946,12 @@
 .tutorialsButton {
     font-size: 12px;
     font-weight: 500;
-    color: #6366F1;
+    color: #FFD208;
     text-decoration: none;
 }
 
 .tutorialsButton:hover {
-    color: #6366F1;
+    color: #FFD208;
 }
 
 .cardHeaderWithButton {
@@ -971,15 +971,15 @@
 .viewMoreButton {
     font-size: 14px;
     font-weight: 500;
-    color: #6366F1;
+    color: #FFD208;
     text-decoration: none;
     padding: 6px 12px;
-    border: 1px solid #6366F1;
+    border: 1px solid #FFD208;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 .viewMoreButton:hover {
-    background: #6366F1;
+    background: #FFD208;
     color: #fff;
 }

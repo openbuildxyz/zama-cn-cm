@@ -7,8 +7,8 @@
 }
 
 .imageUpload:hover {
-  border-color: #6366F1 !important;
-  background-color: #faf5ff !important;
+  border-color: #FFD208 !important;
+  background-color: #fffbe6 !important;
 }
 
 .imageUpload .ant-upload-drag-container {
@@ -22,7 +22,7 @@
 .uploadIconSvg {
   width: 3rem;
   height: 3rem;
-  color: #6366F1;
+  color: #FFD208;
 }
 
 .uploadText {
@@ -63,7 +63,7 @@
 }
 
 .imagePreviewContainer:hover {
-  border-color: #6366F1;
+  border-color: #FFD208;
 }
 
 .previewImage {
@@ -180,14 +180,14 @@
   width: 2rem;
   height: 2rem;
   border: 3px solid rgba(255, 255, 255, 0.3);
-  border-top: 3px solid #6366F1;
+  border-top: 3px solid #FFD208;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 0.5rem;
 }
 
 .loadingText {
-  color: #6366F1;
+  color: #FFD208;
   font-size: 0.875rem;
   font-weight: 500;
 }
@@ -232,8 +232,8 @@
 }
 
 .imagePreview:hover {
-  border-color: #6366F1 !important;
-  background-color: #faf5ff !important;
+  border-color: #FFD208 !important;
+  background-color: #fffbe6 !important;
 }
 
 .imagePreview .ant-upload-drag-container {

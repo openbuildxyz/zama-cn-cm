@@ -2,7 +2,7 @@
   min-height: 100vh;
   padding: 1rem 1rem;
   padding-top: 6.5rem;
-  background: linear-gradient(to bottom right, #faf5ff, #e1dbfe);
+  background: linear-gradient(to bottom right, #fffbe6, #fff8cc);
 }
 
 .header {
@@ -67,7 +67,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #6366f1;
+  background-color: #FFD208;
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -101,7 +101,7 @@
 
 .settingsButton:hover {
   background-color: #f9fafb;
-  border-color: #6366f1;
+  border-color: #FFD208;
   transform: translateY(-1px);
 }
 
@@ -215,7 +215,7 @@
 }
 
 .viewModeButton.active {
-  background-color: #6366f1;
+  background-color: #FFD208;
   color: white;
 }
 
@@ -253,7 +253,7 @@
 }
 
 .viewButton.active {
-  background: #6366f1;
+  background: #FFD208;
   color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -295,7 +295,7 @@
   width: 32px;
   height: 32px;
   border: 3px solid #F4F4F4;
-  border-top: 3px solid #6366f1;
+  border-top: 3px solid #FFD208;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -417,7 +417,7 @@
 }
 
 .categoryTag {
-  background: linear-gradient(to right, #c084fc, #6366f1);
+  background: linear-gradient(to right, #FFD208, #FFD208);
   color: white;
   border-radius: 8px;
   padding: 2px 10px;
@@ -587,7 +587,7 @@
 }
 
 .actionIconButton:hover .actionIcon {
-  color: #6366f1;
+  color: #FFD208;
 }
 
 /* Card Cover */
@@ -595,7 +595,7 @@
   position: relative;
   height: 200px;
   overflow: hidden;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #FFD208 0%, #E6BC00 100%);
 }
 
 .coverImage {
@@ -667,7 +667,7 @@
 }
 
 .statusTag.ongoing {
-  background: rgba(59, 130, 246, 0.9) !important;
+  background: rgba(45, 45, 45, 0.9) !important;
   color: white !important;
 }
 
@@ -781,7 +781,7 @@
 .metaIcon {
   width: 1rem;
   height: 1rem;
-  color: #6366f1;
+  color: #FFD208;
   flex-shrink: 0;
 }
 
@@ -822,19 +822,19 @@
 /* Action Buttons */
 .primaryAction {
   flex: 1 !important;
-  background: linear-gradient(135deg, #6366f1 0%, #6e54ff 100%) !important;
+  background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%) !important;
   border: none !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
   height: 40px !important;
-  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2) !important;
+  box-shadow: 0 2px 4px rgba(255, 210, 8, 0.2) !important;
   transition: all 0.2s !important;
 }
 
 .primaryAction:hover {
-  background: linear-gradient(135deg, #6e54ff 0%, #4338ca 100%) !important;
+  background: linear-gradient(135deg, #FFD208 0%, #E6BC00 100%) !important;
   transform: translateY(-1px) !important;
-  box-shadow: 0 4px 8px rgba(139, 92, 246, 0.3) !important;
+  box-shadow: 0 4px 8px rgba(255, 210, 8, 0.3) !important;
   color: white !important;
 }
 
@@ -852,8 +852,8 @@
 
 .secondaryAction:hover {
   background: #F4F4F4 !important;
-  border-color: #6366f1 !important;
-  color: #6366f1 !important;
+  border-color: #FFD208 !important;
+  color: #FFD208 !important;
   transform: translateY(-1px) !important;
 }
 
@@ -872,15 +872,15 @@
 }
 
 .actionButton:hover {
-  background: #6366f1 !important;
-  border-color: #6366f1 !important;
+  background: #FFD208 !important;
+  border-color: #FFD208 !important;
   color: white !important;
   transform: translateY(-1px) !important;
 }
 
 .actionButton:focus {
-  background: #6366f1 !important;
-  border-color: #6366f1 !important;
+  background: #FFD208 !important;
+  border-color: #FFD208 !important;
   color: white !important;
 }
 
@@ -922,14 +922,14 @@
 .listLink {
   display: block;
   padding: 0.75rem 1rem;
-  color: #6366f1;
+  color: #FFD208;
   text-decoration: none;
   border-left: 3px solid transparent;
   transition: all 0.2s ease;
 }
 
 .listLink:hover {
-  color: #6366f1;
+  color: #FFD208;
   font-weight: bold;
 }
 
@@ -1104,8 +1104,8 @@
 }
 
 .onlineTag {
-  background-color: #dbeafe;
-  color: #1d4ed8;
+  background-color: #fff8cc;
+  color: #2D2D2D;
 }
 
 .offlineTag {
@@ -1194,8 +1194,8 @@
 }
 
 .listStatusBadge.ongoing {
-  background-color: #dbeafe;
-  color: #1d4ed8;
+  background-color: #fff8cc;
+  color: #2D2D2D;
 }
 
 .listStatusBadge.ended {
@@ -1265,7 +1265,7 @@
 .statIconSvg {
   width: 1.5rem;
   height: 1.5rem;
-  color: #6366f1;
+  color: #FFD208;
 }
 
 .statInfo {
@@ -1494,8 +1494,8 @@
 .socialButton:hover {
   background-color: #f7f7f7;
   /* Lighter hover */
-  border-color: #6366f1;
-  color: #6366f1;
+  border-color: #FFD208;
+  color: #FFD208;
   transform: translateY(-1px);
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, 0.08);
 }

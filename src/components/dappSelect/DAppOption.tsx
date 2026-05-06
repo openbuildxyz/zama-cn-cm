@@ -45,7 +45,7 @@ export function DAppOption({ dapp }: DAppOptionProps) {
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
-                  color: '#1890ff',
+                  color: '#2D2D2D',
                   textDecoration: 'underline',
                   cursor: 'pointer'
                 }}
