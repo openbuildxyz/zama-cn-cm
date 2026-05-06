@@ -12,8 +12,9 @@ export const apiRequest = async <T>(
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' = 'GET',
   body: any = null
 ): Promise<ApiResponse<T>> => {
-  // API requests proxied through Next.js rewrites (/api/v1/* → VPS backend)
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || '/api/v1';
+  // Always use /api/v1 proxy path (Next.js rewrites → VPS backend)
+  // Ignore NEXT_PUBLIC_API_URL because the external VPS TLS is broken
+  const apiUrl = '/api/v1';
 
   if (!apiUrl) {
     throw new Error('API URL is not defined');
@@ -66,4 +67,4 @@ export const apiRequest = async <T>(
 };
 
 
-export const StatisticsUrl = (process.env.NEXT_PUBLIC_API_URL || '/api/v1') + "/statistics/stream"
+export const StatisticsUrl = '/api/v1/statistics/stream'
