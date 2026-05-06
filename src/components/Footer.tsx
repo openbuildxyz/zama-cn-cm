@@ -18,7 +18,7 @@ export default function Footer() {
         </div>
         <div className={styles.footerBottom}>
           <p className={styles.footerCopyright}>
-            &copy; 2025 Zama 中文社区. 保留所有权利
+            &copy; 2026 Zama 中文社区. 保留所有权利
           </p>
         </div>
       </div>
