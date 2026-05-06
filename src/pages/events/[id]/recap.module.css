@@ -37,7 +37,7 @@
 }
 
 .backBtn:hover {
-  background-color: #f3f4f6 !important;
+  background-color: #F4F4F4 !important;
   color: #7c3aed !important;
 }
 
@@ -150,7 +150,7 @@
   color: #111827;
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
-  border-bottom: 2px solid #f3f4f6;
+  border-bottom: 2px solid #F4F4F4;
 }
 
 /* 表单项样式覆盖 */
@@ -196,7 +196,7 @@
 
 /* 媒体提示 */
 .mediaNote {
-  background: #f8fafc;
+  background: #F4F4F4;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   padding: 1rem;

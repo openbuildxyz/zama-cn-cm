@@ -1,7 +1,7 @@
 .container {
   min-height: 100vh;
   background: linear-gradient(135deg, #faf5ff 0%, #eff6ff 100%);
-  color: #1f2937;
+  color: #2D2D2D;
 }
 
 .header {
@@ -73,7 +73,7 @@
 .section {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid #F4F4F4;
 }
 
 .section:last-child {
@@ -203,7 +203,7 @@
 
 /* Tag 组件样式 */
 .tag {
-  background: #f3f4f6 !important;
+  background: #F4F4F4 !important;
   border: 1px solid #e5e7eb !important;
   border-radius: 1rem !important;
   color: #374151 !important;
@@ -221,7 +221,7 @@
 }
 
 .addTag {
-  background: #f3f4f6 !important;
+  background: #F4F4F4 !important;
   border: 1px dashed #6366F1 !important;
   border-radius: 1rem !important;
   color: #6366F1 !important;
@@ -272,7 +272,7 @@
 .submitSection {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid #f3f4f6;
+  border-top: 1px solid #F4F4F4;
 }
 
 /* Button 组件样式 */

@@ -401,7 +401,7 @@
 }
 
 .imageActionButton:hover {
-  background-color: #f3f4f6;
+  background-color: #F4F4F4;
   transform: scale(1.1);
 }
 
@@ -505,7 +505,7 @@
   display: flex !important;
   align-items: center !important;
   gap: 0.5rem !important;
-  background-color: #f3f4f6 !important;
+  background-color: #F4F4F4 !important;
   color: #374151 !important;
   padding: 0.5rem 0.75rem !important;
   border-radius: 9999px !important;

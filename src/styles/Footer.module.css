@@ -6,7 +6,7 @@
 
 /* Footer */
 .footer {
-  background: #1f2937;
+  background: #000000;
   color: white;
   padding: 4rem 1rem;
 }
@@ -86,7 +86,7 @@
   position: relative;
   width: 2rem;
   height: 2rem;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: #FFD208;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -94,15 +94,15 @@
 }
 
 .footerLogoText {
-  color: white;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 900;
   font-size: 0.875rem;
 }
 
 .footerLogoGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: #FFD208;
   border-radius: 0.5rem;
   filter: blur(10px);
   opacity: 0.5;
@@ -110,16 +110,17 @@
 
 .footerLogoTitle {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
 
 .footerDescription {
-  color: #9ca3af;
+  color: #F4F4F4;
   line-height: 1.6;
 }
 
 .footerSectionTitle {
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1.5rem;
 }
 
@@ -172,7 +173,7 @@
 }
 
 .footerLink {
-  color: #9ca3af;
+  color: #F4F4F4;
   text-decoration: none;
   transition: color 0.3s ease;
   font-size: 0.9rem;
@@ -186,7 +187,7 @@
 }
 
 .footerLink:hover {
-  color: white;
+  color: #FFD208;
 }
 
 .footerSocial {
@@ -212,8 +213,8 @@
 
 .socialButton {
   background: transparent;
-  border: 1px solid #4b5563;
-  color: #9ca3af;
+  border: 1px solid #2D2D2D;
+  color: #F4F4F4;
   padding: 0.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
@@ -240,10 +241,10 @@
 }
 
 .socialButton:hover {
-  background: #374151;
-  color: white;
+  background: #FFD208;
+  color: #000000;
   transform: scale(1.05);
-  border-color: #6b7280;
+  border-color: #FFD208;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -254,7 +255,7 @@
 }
 
 .footerBottom {
-  border-top: 1px solid #374151;
+  border-top: 1px solid #2D2D2D;
   padding-top: 2rem;
   text-align: center;
 }
@@ -273,7 +274,7 @@
 }
 
 .footerCopyright {
-  color: #9ca3af;
+  color: #F4F4F4;
   margin: 0;
 }
 
@@ -292,11 +293,11 @@
 }
 
 .toOpenBuild {
-  color: #FFCE44;
+  color: #FFD208;
 }
 
 .toOpenBuild:hover {
-  color: #F5A623;
+  color: #E6BC00;
 }
 
 /* Responsive Design */

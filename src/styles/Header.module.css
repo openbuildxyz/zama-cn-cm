@@ -22,9 +22,9 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  box-shadow: 0px 2px 4px rgba(226, 226, 226, 0.5);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   border-radius: 72px;
   transition: all 0.3s ease;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -32,8 +32,8 @@
 }
 
 .headerContent:hover {
-  background: rgba(255, 255, 255, 0.65);
-  box-shadow: 0px 6px 16px rgba(255, 206, 68, 0.15);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0px 6px 16px rgba(255, 210, 8, 0.15);
   transform: translateY(-1px);
 }
 
@@ -46,8 +46,8 @@
 
 .logoTitle {
   font-size: 1.4rem;
-  font-weight: 700;
-  background: linear-gradient(135deg, #1f2937 0%, #FFCE44 100%);
+  font-weight: 900;
+  background: linear-gradient(135deg, #000000 0%, #2D2D2D 58%, #FFD208 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -68,9 +68,9 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  color: #4b5563;
+  color: #2D2D2D;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 0.5rem 0.75rem;
@@ -80,8 +80,8 @@
 }
 
 .navItem:hover {
-  color: #FFCE44;
-  background: rgba(255, 206, 68, 0.1);
+  color: #000000;
+  background: rgba(255, 210, 8, 0.1);
 }
 
 .navIcon {
@@ -90,14 +90,14 @@
 }
 
 .navButton {
-  background: #FFCE44;
-  color: #1f2937;
+  background: #FFD208;
+  color: #000000;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 0.95rem;
-  font-weight: 600;
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(255, 210, 8, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
   white-space: nowrap;
@@ -106,8 +106,8 @@
 }
 
 .navButton:hover {
-  background: #F5A623;
-  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.4);
+  background: #E6BC00;
+  box-shadow: 0 4px 12px rgba(255, 210, 8, 0.4);
   transform: translateY(-1px);
 }
 
@@ -127,7 +127,7 @@
   left: 0;
   right: 0;
   background: transparent;
-  color: #1f2937;
+  color: #2D2D2D;
   padding: 0.75rem 0;
   z-index: 90;
   overflow: hidden;
@@ -158,21 +158,21 @@
 }
 
 .newsBadge {
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
-  color: white;
-  border: 1px solid rgba(255, 206, 68, 0.3);
+  background: #FFD208;
+  color: #000000;
+  border: 1px solid rgba(255, 210, 8, 0.3);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 800;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 210, 8, 0.3);
 }
 
 .newsText {
   font-size: 0.875rem;
   flex-shrink: 0;
-  color: #1f2937;
+  color: #2D2D2D;
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
 }
@@ -233,9 +233,9 @@
 }
 
 .mobileMenuButton:hover {
-  background: #f3f4f6;
-  border-color: #FFCE44;
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.15);
+  background: rgba(255, 210, 8, 0.12);
+  border-color: #FFD208;
+  box-shadow: 0 2px 8px rgba(255, 210, 8, 0.15);
 }
 
 .mobileMenuButton:active {
@@ -261,8 +261,8 @@
 
 .mobileMenuSectionTitle {
   margin-bottom: 1rem;
-  color: #1f2937;
-  font-weight: 600;
+  color: #000000;
+  font-weight: 800;
   font-size: 1rem;
   position: relative;
   padding-bottom: 0.5rem;
@@ -275,7 +275,7 @@
   left: 0;
   width: 2rem;
   height: 2px;
-  background: linear-gradient(90deg, #F5A623, #FFCE44);
+  background: linear-gradient(90deg, #FFD208, #FFD208);
   border-radius: 1px;
 }
 
@@ -299,9 +299,9 @@
 }
 
 .mobileMenuLink:hover {
-  background: rgba(255, 206, 68, 0.05);
-  border-color: rgba(255, 206, 68, 0.2);
-  color: #FFCE44;
+  background: rgba(255, 210, 8, 0.05);
+  border-color: rgba(255, 210, 8, 0.2);
+  color: #000000;
   transform: translateX(4px);
 }
 

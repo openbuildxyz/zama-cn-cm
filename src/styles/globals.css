@@ -4,10 +4,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #FFCE44;
-  --primary-dark: #d4a017;
-  --selection-bg: rgba(255, 206, 68, 0.25);
-  --selection-color: #1f2937;
+  --primary: #FFD208;
+  --primary-dark: #E6BC00;
+  --selection-bg: rgba(255, 210, 8, 0.25);
+  --selection-color: #2D2D2D;
 }
 
 ::selection {

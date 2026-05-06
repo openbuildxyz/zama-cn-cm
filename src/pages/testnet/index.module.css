@@ -58,7 +58,7 @@
 }
 
 .heroTitle {
-    color: #1f2937 !important;
+    color: #2D2D2D !important;
     margin-bottom: 24px !important;
     font-size: 48px !important;
     font-weight: 700 !important;
@@ -120,7 +120,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 24px !important;
-    color: #1f2937 !important;
+    color: #2D2D2D !important;
     font-weight: 600 !important;
 }
 
@@ -172,7 +172,7 @@
 }
 
 .statusCardBlue::before {
-    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    background: linear-gradient(90deg, #2D2D2D, #2563eb);
 }
 
 .statusCardOrange::before {
@@ -210,7 +210,7 @@
 
 .statusCardBlue .statusIcon {
     background: rgba(59, 130, 246, 0.1);
-    color: #3b82f6;
+    color: #2D2D2D;
 }
 
 .statusCardOrange .statusIcon {
@@ -368,7 +368,7 @@
 
 .configCode {
     flex: 1;
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    background: linear-gradient(135deg, #F4F4F4, #f1f5f9);
     border: 1px solid #e2e8f0;
     padding: 10px 12px;
     border-radius: 8px;
@@ -380,7 +380,7 @@
 
 .configCodeBlock {
     display: block;
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+    background: linear-gradient(135deg, #F4F4F4, #f1f5f9);
     border: 1px solid #e2e8f0;
     padding: 10px 12px;
     border-radius: 8px;
@@ -434,7 +434,7 @@
 }
 
 .faucetItemRecommended {
-    border-color: #3b82f6;
+    border-color: #2D2D2D;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), rgba(59, 130, 246, 0.01));
 }
 
@@ -686,7 +686,7 @@
 }
 
 .ctaWhiteButton:hover {
-    background: #f8fafc !important;
+    background: #F4F4F4 !important;
     color: #6E54FF !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;

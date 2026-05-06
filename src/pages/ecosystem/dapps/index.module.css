@@ -5,7 +5,7 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #1f2937 0%, #374151 60%, #1f2937 100%);
+  background: linear-gradient(135deg, #2D2D2D 0%, #374151 60%, #2D2D2D 100%);
   padding: 4rem 0;
   color: white;
 }
@@ -170,8 +170,8 @@
 
 .searchInput:focus {
   outline: none;
-  border-color: #FFCE44;
-  box-shadow: 0 0 0 3px rgba(255, 206, 68, 0.15);
+  border-color: #FFD208;
+  box-shadow: 0 0 0 3px rgba(255, 210, 8, 0.15);
 }
 
 .categoryFilters {
@@ -194,15 +194,15 @@
 }
 
 .categoryButton:hover {
-  border-color: var(--category-color, #FFCE44);
-  color: var(--category-color, #1f2937);
+  border-color: var(--category-color, #FFD208);
+  color: var(--category-color, #2D2D2D);
   transform: translateY(-1px);
 }
 
 .categoryButton.active {
-  background: var(--category-color, #FFCE44);
-  border-color: var(--category-color, #FFCE44);
-  color: #1f2937;
+  background: var(--category-color, #FFD208);
+  border-color: var(--category-color, #FFD208);
+  color: #2D2D2D;
 }
 
 /* Results Section */
@@ -337,9 +337,9 @@
 }
 
 .tag {
-  color: #1f2937;
+  color: #2D2D2D;
   padding: 2px 6px;
-  border-color: #FFCE44;
+  border-color: #FFD208;
   border-radius: 4px;
   font-size: 12px;
   line-height: 1;
@@ -364,12 +364,12 @@
 .tutorialsButton {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1f2937;
+  color: #2D2D2D;
   text-decoration: none;
 }
 
 .tutorialsButton:hover {
-  color: #d4a017;
+  color: #E6BC00;
   font-size: 0.9rem;
 }
 
@@ -411,8 +411,8 @@
 .loadingSpinner {
   width: 32px;
   height: 32px;
-  border: 3px solid #f3f4f6;
-  border-top: 3px solid #FFCE44;
+  border: 3px solid #F4F4F4;
+  border-top: 3px solid #FFD208;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

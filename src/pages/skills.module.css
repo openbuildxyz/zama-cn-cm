@@ -16,8 +16,8 @@
 
 .badge {
   display: inline-block;
-  background: rgba(255, 206, 68, 0.15);
-  border: 1px solid rgba(255, 206, 68, 0.5);
+  background: rgba(255, 210, 8, 0.15);
+  border: 1px solid rgba(255, 210, 8, 0.5);
   color: #92700a;
   font-size: 0.8rem;
   font-weight: 600;
@@ -86,7 +86,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background: #f3f4f6;
+  background: #F4F4F4;
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
 }
@@ -99,8 +99,8 @@
 
 .btnPrimary {
   padding: 0.4rem 1rem;
-  background: #FFCE44;
-  color: #1f2937;
+  background: #FFD208;
+  color: #2D2D2D;
   border: none;
   border-radius: 6px;
   font-size: 0.82rem;

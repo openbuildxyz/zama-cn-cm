@@ -179,7 +179,7 @@ export default function Header() {
       <Drawer
         title={
           <div style={{
-            background: 'linear-gradient(135deg, #1f2937, #FFCE44)',
+            background: 'linear-gradient(135deg, #000000, #2D2D2D 58%, #FFD208)',
             WebkitBackgroundClip: 'text',
             backgroundClip: 'text',
             color: 'transparent',
@@ -195,7 +195,7 @@ export default function Header() {
         width={280}
         styles={{
           body: { padding: '1.5rem 1rem' },
-          header: { borderBottom: '1px solid #f3f4f6', paddingBottom: '1rem' }
+          header: { borderBottom: '1px solid #F4F4F4', paddingBottom: '1rem' }
         }}
       >
         <div className={styles.mobileMenuContent}>

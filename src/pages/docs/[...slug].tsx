@@ -134,8 +134,8 @@ export default function DocsPage({ content, slug, docsCategories, currentDocTitl
               <div style={{
                 margin: '0 0 1.5rem',
                 padding: '0.875rem 1.25rem',
-                background: 'rgba(255,206,68,0.1)',
-                border: '1px solid rgba(255,206,68,0.4)',
+                background: 'rgba(255, 210, 8, 0.1)',
+                border: '1px solid rgba(255, 210, 8, 0.4)',
                 borderRadius: '8px',
                 display: 'flex',
                 alignItems: 'center',
@@ -147,7 +147,7 @@ export default function DocsPage({ content, slug, docsCategories, currentDocTitl
                 <code style={{
                   flex: 1,
                   fontSize: '0.82rem',
-                  background: '#f3f4f6',
+                  background: '#F4F4F4',
                   padding: '0.25rem 0.6rem',
                   borderRadius: '4px',
                   wordBreak: 'break-all',
@@ -160,8 +160,8 @@ export default function DocsPage({ content, slug, docsCategories, currentDocTitl
                   }}
                   style={{
                     padding: '0.3rem 0.9rem',
-                    background: '#FFCE44',
-                    color: '#1f2937',
+                    background: '#FFD208',
+                    color: '#2D2D2D',
                     border: 'none',
                     borderRadius: '6px',
                     cursor: 'pointer',

@@ -1,8 +1,8 @@
 /* 基础布局 */
 .homepage {
   min-height: 100vh;
-  background: #f8fafc;
-  color: #1f2937;
+  background: #F4F4F4;
+  color: #2D2D2D;
   position: relative;
   overflow-x: hidden;
 }
@@ -44,24 +44,24 @@
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: linear-gradient(135deg, #FFD208, #FFD208);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(255, 206, 68, 0.25);
+  box-shadow: 0 10px 25px rgba(255, 210, 8, 0.25);
 }
 
 .logoText {
-  color: white;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 900;
   font-size: 1.125rem;
 }
 
 .logoGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: linear-gradient(135deg, #FFD208, #FFD208);
   border-radius: 0.75rem;
   filter: blur(10px);
   opacity: 0.5;
@@ -70,8 +70,8 @@
 
 .logoTitle {
   font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(135deg, #1f2937, #FFCE44);
+  font-weight: 900;
+  background: linear-gradient(135deg, #000000, #2D2D2D 58%, #FFD208);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -93,7 +93,7 @@
 }
 
 .navItem:hover {
-  color: #FFCE44;
+  color: #FFD208;
   transform: scale(1.05);
 }
 
@@ -103,19 +103,19 @@
 }
 
 .navButton {
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
-  color: white;
+  background: #FFD208;
+  color: #000000;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  font-weight: 500;
-  box-shadow: 0 10px 25px rgba(255, 206, 68, 0.25);
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(255, 210, 8, 0.25);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .navButton:hover {
-  box-shadow: 0 15px 35px rgba(255, 206, 68, 0.4);
+  box-shadow: 0 15px 35px rgba(255, 210, 8, 0.4);
   transform: scale(1.05);
 }
 
@@ -128,7 +128,7 @@
   right: 0;
   background: transparent;
   /* 完全透明背景 */
-  color: #1f2937;
+  color: #2D2D2D;
   padding: 0.75rem 0;
   z-index: 90;
   /* 确保在header下面但在其他内容上面 */
@@ -162,22 +162,22 @@
 }
 
 .newsBadge {
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
-  color: white;
-  border: 1px solid rgba(255, 206, 68, 0.3);
+  background: #FFD208;
+  color: #000000;
+  border: 1px solid rgba(255, 210, 8, 0.3);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 800;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.3);
+  box-shadow: 0 2px 8px rgba(255, 210, 8, 0.3);
   /* 给标签添加轻微阴影以增强可读性 */
 }
 
 .newsText {
   font-size: 0.875rem;
   flex-shrink: 0;
-  color: #1f2937;
+  color: #2D2D2D;
   font-weight: 600;
   /* 增加字重以提高可读性 */
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
@@ -221,7 +221,8 @@
   padding-top: 5.5rem;
   /* 为固定导航栏自然留出空间 */
   overflow: hidden;
-  background: transparent;
+  background: #000000;
+  color: #FFFFFF;
 }
 
 /* 移动端Hero优化 */
@@ -275,10 +276,14 @@
 .heroGradient {
   position: absolute;
   inset: 0;
-  background-image: url('/welcome-bg.png');
+  background-image:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2), #000000 100%),
+    linear-gradient(135deg, rgba(255, 210, 8, 0.2), rgba(0, 0, 0, 0.88) 42%),
+    url('/welcome-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.82;
 }
 
 .mouseGradient {
@@ -297,7 +302,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: #F5A623;
+  background: #FFD208;
   border-radius: 50%;
   opacity: 0.2;
   animation: pulse 2s infinite;
@@ -314,6 +319,10 @@
   transition: all 1s ease;
   width: 100%;
   padding: 2rem 1rem;
+  min-height: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .heroVisible {
@@ -323,9 +332,9 @@
 
 .heroBadge {
   display: inline-block;
-  background: rgba(255, 206, 68, 0.15);
-  border: 1px solid rgba(255, 206, 68, 0.3);
-  color: #FFCE44;
+  background: rgba(255, 210, 8, 0.15);
+  border: 1px solid rgba(255, 210, 8, 0.3);
+  color: #FFD208;
   padding: 0.5rem 1rem;
   border-radius: 16px;
   font-size: 0.875rem;
@@ -339,14 +348,15 @@
   height: 172px;
   font-family: 'Noto Sans SC', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 72px;
   line-height: 86px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #0E100F;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
   margin: 0 auto;
   margin-bottom: 0;
   position: relative;
@@ -378,7 +388,7 @@
 
 
 .heroTitlePrimary {
-  background: linear-gradient(135deg, #1f2937, #FFCE44, #3b82f6);
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFD208 58%, #FFFFFF 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -408,7 +418,7 @@
   height: 80px;
   left: 0;
   top: 0;
-  background: linear-gradient(180deg, rgba(255, 206, 68, 0) 0%, #FFCE44 100%);
+  background: linear-gradient(180deg, rgba(255, 210, 8, 0) 0%, #FFD208 100%);
   opacity: 0.5;
 }
 
@@ -418,7 +428,7 @@
   height: 8px;
   left: 0;
   top: 72px;
-  background: #FFCE44;
+  background: #FFD208;
 }
 
 .heroSubtitle {
@@ -426,13 +436,13 @@
   height: 80px;
   font-family: 'Noto Sans SC', sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 24px;
   line-height: 40px;
   display: flex;
   align-items: center;
   text-align: center;
-  color: #0E100F;
+  color: #FFFFFF;
   margin: 0 auto;
   margin-bottom: 1rem;
   justify-content: center;
@@ -441,8 +451,8 @@
 }
 
 .heroHighlight {
-  color: #0E100F;
-  font-weight: 500;
+  color: #FFD208;
+  font-weight: 800;
 }
 
 .heroButtons {
@@ -455,14 +465,14 @@
 }
 
 .heroPrimaryButton {
-  background: #FFCE44;
-  color: #1f2937 !important;
+  background: #FFD208;
+  color: #000000 !important;
   border: none;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.3);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(255, 210, 8, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -473,23 +483,23 @@
 }
 
 .heroPrimaryButton:hover {
-  background: #F5A623;
-  color: #1f2937 !important;
-  box-shadow: 0 6px 16px rgba(255, 206, 68, 0.4);
+  background: #E6BC00;
+  color: #000000 !important;
+  box-shadow: 0 6px 16px rgba(255, 210, 8, 0.4);
   transform: translateY(-1px);
   border: none;
   text-decoration: none;
 }
 
 .heroSecondaryButton {
-  background: rgba(255, 255, 255, 0.9);
-  color: #1f2937;
-  border: 1px solid rgba(255, 206, 68, 0.4);
+  background: rgba(0, 0, 0, 0.35);
+  color: #FFD208;
+  border: 1px solid rgba(255, 210, 8, 0.7);
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
   font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.15);
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(255, 210, 8, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -499,11 +509,11 @@
 }
 
 .heroSecondaryButton:hover {
-  background: rgba(255, 206, 68, 0.1);
-  border-color: #FFCE44;
-  box-shadow: 0 6px 16px rgba(255, 206, 68, 0.25);
+  background: rgba(255, 210, 8, 0.12);
+  border-color: #FFD208;
+  box-shadow: 0 6px 16px rgba(255, 210, 8, 0.25);
   transform: translateY(-1px);
-  color: #1f2937;
+  color: #FFD208;
 }
 
 .buttonIcon {
@@ -521,19 +531,19 @@
 }
 
 .heroPrimaryButton .buttonIcon {
-  color: #1f2937;
+  color: #000000;
 }
 
 .heroPrimaryButton:hover .buttonIcon {
-  color: #1f2937;
+  color: #000000;
 }
 
 .heroSecondaryButton .buttonIcon {
-  color: #1f2937;
+  color: #FFD208;
 }
 
 .heroSecondaryButton:hover .buttonIcon {
-  color: #1f2937;
+  color: #FFD208;
 }
 
 /* Hero Gallery */
@@ -654,9 +664,9 @@
 }
 
 .galleryNavigation:hover {
-  background: rgba(255, 206, 68, 0.1);
-  border-color: rgba(255, 206, 68, 0.3);
-  box-shadow: 0 12px 32px rgba(255, 206, 68, 0.2);
+  background: rgba(255, 210, 8, 0.1);
+  border-color: rgba(255, 210, 8, 0.3);
+  box-shadow: 0 12px 32px rgba(255, 210, 8, 0.2);
 }
 
 .galleryNavPrev {
@@ -670,12 +680,12 @@
 .galleryNavIcon {
   width: 20px;
   height: 20px;
-  color: #FFCE44;
+  color: #FFD208;
   transition: all 0.3s ease;
 }
 
 .galleryNavigation:hover .galleryNavIcon {
-  color: #F5A623;
+  color: #FFD208;
 }
 
 /* 在触摸设备上隐藏导航按钮 */
@@ -973,7 +983,7 @@
   padding: 0.75rem;
   border-radius: 50%;
   background: #f3e8ff;
-  color: #FFCE44;
+  color: #FFD208;
   transition: transform 0.3s ease;
 }
 
@@ -989,13 +999,13 @@
 .statValue {
   font-size: 1.875rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #2D2D2D;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
 }
 
 .statItem:hover .statValue {
-  color: #FFCE44;
+  color: #FFD208;
 }
 
 .statLabel {
@@ -1010,9 +1020,10 @@
 
 .sectionTitle {
   font-size: 2.5rem;
-  font-weight: bold;
-  color: #1f2937;
+  font-weight: 900;
+  color: #000000;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .sectionDescription {
@@ -1031,7 +1042,7 @@
 /* Features Section */
 .features {
   padding: 5rem 1rem;
-  background: #f8fafc;
+  background: #F4F4F4;
 }
 
 .featuresGrid {
@@ -1049,8 +1060,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(255, 206, 68, 0.08),
-      rgba(99, 102, 241, 0.06));
+      rgba(255, 210, 8, 0.08),
+      rgba(0, 0, 0, 0.06));
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 1rem;
@@ -1063,7 +1074,7 @@
 
 .featureCardContent {
   position: relative;
-  background: rgba(255, 255, 255, 0.95);
+  background: #FFFFFF;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(229, 231, 235, 0.6);
   border-radius: 1rem;
@@ -1075,22 +1086,22 @@
 .featureCard:hover .featureCardContent {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: rgba(255, 206, 68, 0.15);
+  border-color: rgba(255, 210, 8, 0.15);
 }
 
 .featureIconWrapper {
   display: inline-flex;
   padding: 1rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.1), rgba(99, 102, 241, 0.08));
-  color: #FFCE44;
+  background: linear-gradient(135deg, rgba(255, 210, 8, 0.18), rgba(0, 0, 0, 0.04));
+  color: #FFD208;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
 .featureCard:hover .featureIconWrapper {
   transform: scale(1.03);
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.15), rgba(99, 102, 241, 0.12));
+  background: linear-gradient(135deg, rgba(255, 210, 8, 0.25), rgba(0, 0, 0, 0.08));
 }
 
 .featureIcon {
@@ -1101,7 +1112,7 @@
 .featureTitle {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #2D2D2D;
   margin-bottom: 0.5rem;
 }
 
@@ -1153,7 +1164,7 @@
 .activityCard:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  border-color: rgba(255, 206, 68, 0.2);
+  border-color: rgba(255, 210, 8, 0.2);
 }
 
 .activityCardHeader {
@@ -1183,7 +1194,7 @@
 }
 
 .activityBadgeInactive {
-  background: #f3f4f6;
+  background: #F4F4F4;
   color: #374151;
   border: 1px solid #d1d5db;
 }
@@ -1204,7 +1215,7 @@
 .activityTitle {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #2D2D2D;
   margin-bottom: 0.5rem;
 }
 
@@ -1269,7 +1280,7 @@
 /* Milestones Section - Horizontal Timeline */
 .milestones {
   padding: 4rem 0 3rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #F4F4F4 0%, #ffffff 100%);
   overflow: hidden;
 }
 
@@ -1279,18 +1290,18 @@
   overflow-y: visible;
   padding: 0 3rem 1.5rem;
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 206, 68, 0.6) #f3f4f6;
+  scrollbar-color: rgba(255, 210, 8, 0.6) #F4F4F4;
 }
 
 .timeline::-webkit-scrollbar {
   height: 5px;
 }
 .timeline::-webkit-scrollbar-track {
-  background: #f3f4f6;
+  background: #F4F4F4;
   border-radius: 3px;
 }
 .timeline::-webkit-scrollbar-thumb {
-  background: #FFCE44;
+  background: #FFD208;
   border-radius: 3px;
 }
 
@@ -1317,13 +1328,13 @@
   background: linear-gradient(
     to right,
     transparent 0%,
-    #FFCE44 2%,
-    #F5A623 50%,
-    #FFCE44 98%,
+    #FFD208 2%,
+    #FFD208 50%,
+    #FFD208 98%,
     transparent 100%
   );
   border-radius: 2px;
-  box-shadow: 0 0 14px rgba(255, 206, 68, 0.28);
+  box-shadow: 0 0 14px rgba(255, 210, 8, 0.28);
   z-index: 1;
 }
 
@@ -1382,12 +1393,12 @@
   height: 3rem;
   flex-shrink: 0;
   border-radius: 50%;
-  background: linear-gradient(135deg, #FFCE44 0%, #F5A623 100%);
+  background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow:
-    0 4px 12px rgba(255, 206, 68, 0.25),
+    0 4px 12px rgba(255, 210, 8, 0.25),
     inset 0 1px 3px rgba(255, 255, 255, 0.4);
   z-index: 10;
   border: 3px solid #ffffff;
@@ -1396,7 +1407,7 @@
 
 .milestoneItem:hover .milestoneIcon {
   transform: scale(1.12);
-  box-shadow: 0 6px 20px rgba(255, 206, 68, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 210, 8, 0.4);
 }
 
 /* 日期徽章 */
@@ -1410,13 +1421,13 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: #d4a017;
+  color: #000000;
   font-weight: 600;
   font-size: 0.75rem;
-  background: rgba(255, 206, 68, 0.08);
+  background: rgba(255, 210, 8, 0.08);
   padding: 0.3rem 0.75rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 206, 68, 0.2);
+  border: 1px solid rgba(255, 210, 8, 0.2);
   white-space: nowrap;
 }
 
@@ -1429,14 +1440,14 @@
 .milestoneTitle {
   font-size: 0.875rem;
   font-weight: 700;
-  color: #1f2937;
+  color: #2D2D2D;
   margin-bottom: 0.5rem;
   line-height: 1.35;
   transition: color 0.2s ease;
 }
 
 .milestoneContent:hover .milestoneTitle {
-  color: #d4a017;
+  color: #000000;
 }
 
 /* 描述 */
@@ -1487,7 +1498,7 @@
 /* Resources Section */
 .resources {
   padding: 5rem 1rem;
-  background: #f8fafc;
+  background: #FFFFFF;
 }
 
 .resourcesGrid {
@@ -1511,8 +1522,8 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg,
-      rgba(255, 206, 68, 0.08),
-      rgba(99, 102, 241, 0.06));
+      rgba(255, 210, 8, 0.08),
+      rgba(0, 0, 0, 0.06));
   opacity: 0;
   transition: opacity 0.3s ease;
   border-radius: 1rem;
@@ -1526,7 +1537,7 @@
 .resourceCard:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  border-color: rgba(255, 206, 68, 0.15);
+  border-color: rgba(255, 210, 8, 0.15);
 }
 
 .resourceCardHeader {
@@ -1538,15 +1549,15 @@
   display: inline-flex;
   padding: 1rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.1), rgba(99, 102, 241, 0.08));
-  color: #FFCE44;
+  background: linear-gradient(135deg, rgba(255, 210, 8, 0.18), rgba(0, 0, 0, 0.04));
+  color: #FFD208;
   margin-bottom: 1rem;
   transition: all 0.3s ease;
 }
 
 .resourceCard:hover .resourceIconWrapper {
   transform: scale(1.03);
-  background: linear-gradient(135deg, rgba(255, 206, 68, 0.15), rgba(99, 102, 241, 0.12));
+  background: linear-gradient(135deg, rgba(255, 210, 8, 0.25), rgba(0, 0, 0, 0.08));
 }
 
 .resourceIcon {
@@ -1557,7 +1568,7 @@
 .resourceTitle {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #1f2937;
+  color: #2D2D2D;
   margin-bottom: 0.5rem;
 }
 
@@ -1572,8 +1583,8 @@
 
 .resourceButton {
   width: 100%;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
-  color: white;
+  background: #000000;
+  color: #FFD208;
   border: none;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
@@ -1583,15 +1594,15 @@
 }
 
 .resourceButton:hover {
-  background: linear-gradient(135deg, #F5A623, #4f46e5);
+  background: #2D2D2D;
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(255, 206, 68, 0.2);
+  box-shadow: 0 2px 8px rgba(255, 210, 8, 0.2);
 }
 
 /* Members Section */
 .members {
   padding: 5rem 1rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(135deg, #F4F4F4 0%, #ffffff 100%);
 }
 
 .membersContainer {
@@ -1605,7 +1616,7 @@
   top: 0;
   bottom: 0;
   width: 5rem;
-  background: linear-gradient(to right, #f8fafc, transparent);
+  background: linear-gradient(to right, #F4F4F4, transparent);
   z-index: 10;
 }
 
@@ -1615,7 +1626,7 @@
   top: 0;
   bottom: 0;
   width: 5rem;
-  background: linear-gradient(to left, #f8fafc, transparent);
+  background: linear-gradient(to left, #F4F4F4, transparent);
   z-index: 10;
 }
 
@@ -1681,7 +1692,7 @@
 }
 
 .memberName {
-  color: #1f2937;
+  color: #2D2D2D;
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
@@ -1697,17 +1708,17 @@
 }
 
 .memberItem:hover .memberName {
-  color: #FFCE44;
+  color: #FFD208;
 }
 
 .memberItem:hover .memberTwitter {
-  color: #F5A623;
+  color: #FFD208;
 }
 
 /* CTA Section */
 .cta {
   padding: 5rem 1rem;
-  background: linear-gradient(135deg, #1a1a2e 0%, #0E100F 100%);
+  background: linear-gradient(135deg, #000000 0%, #2D2D2D 100%);
   color: white;
   position: relative;
   overflow: hidden;
@@ -1722,7 +1733,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: white;
+  background: #FFD208;
   border-radius: 50%;
   opacity: 0.2;
   animation: pulse 2s infinite;
@@ -1732,7 +1743,7 @@
   position: absolute;
   width: 4px;
   height: 4px;
-  background: white;
+  background: #FFD208;
   border-radius: 50%;
   opacity: 0.1;
   left: 50%;
@@ -1757,6 +1768,8 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
   margin-bottom: 1.5rem;
+  color: #FFD208;
+  letter-spacing: -0.02em;
 }
 
 .ctaSubtitle {
@@ -1775,12 +1788,12 @@
 }
 
 .ctaPrimaryButton {
-  background: #FFCE44;
-  color: #1f2937;
+  background: #FFD208;
+  color: #000000;
   border: none;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: 800;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -1789,15 +1802,15 @@
 }
 
 .ctaPrimaryButton:hover {
-  background: #F5A623;
-  color: #1f2937;
+  background: #E6BC00;
+  color: #000000;
   transform: scale(1.1);
 }
 
 .ctaSecondaryButton {
   background: transparent;
-  color: white;
-  border: 1px solid white;
+  color: #FFD208;
+  border: 1px solid #FFD208;
   padding: 0.75rem 2rem;
   border-radius: 0.5rem;
   font-weight: 500;
@@ -1809,14 +1822,14 @@
 }
 
 .ctaSecondaryButton:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  background: rgba(255, 210, 8, 0.12);
+  color: #FFD208;
   transform: scale(1.1);
 }
 
 /* Footer */
 .footer {
-  background: #1f2937;
+  background: #000000;
   color: white;
   padding: 4rem 1rem;
 }
@@ -1843,7 +1856,7 @@
   position: relative;
   width: 2rem;
   height: 2rem;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: #FFD208;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
@@ -1851,15 +1864,15 @@
 }
 
 .footerLogoText {
-  color: white;
-  font-weight: bold;
+  color: #000000;
+  font-weight: 900;
   font-size: 0.875rem;
 }
 
 .footerLogoGlow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #FFCE44, #F5A623);
+  background: #FFD208;
   border-radius: 0.5rem;
   filter: blur(10px);
   opacity: 0.5;
@@ -2177,9 +2190,9 @@
 }
 
 .tag {
-  color: #F5A623;
+  color: #FFD208;
   padding: 2px 6px;
-  border-color: #F5A623;
+  border-color: #FFD208;
   border-radius: 4px;
   font-size: 12px;
 }
@@ -2206,12 +2219,12 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .viewMoreButton:hover {
-  background: linear-gradient(135deg, #F5A623 0%, #FFCE44 100%);
+  background: linear-gradient(135deg, #FFD208 0%, #FFD208 100%);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(255, 206, 68, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 210, 8, 0.3);
   transform: translateY(-1px);
 }
