@@ -144,6 +144,7 @@ export default function Header() {
             <Dropdown
               menu={{
                 items: [
+                  { key: 'shielded', label: <Link href="https://www.zama.org/shielded" target="_blank">SHIELDED 季度报告</Link> },
                   { key: 'blog', label: <Link href="/blogs">博客</Link> },
                   { key: 'litepaper', label: <Link href="https://docs.zama.ai/protocol" target="_blank">Protocol Litepaper</Link> },
                   { type: 'divider' },
@@ -272,6 +273,10 @@ export default function Header() {
           <div className={styles.mobileMenuSection}>
             <h3 className={styles.mobileMenuSectionTitle}>官方资源</h3>
             <div className={styles.mobileMenuLinks}>
+              <Link href="https://www.zama.org/shielded" target="_blank" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
+                <span>📊</span>
+                <span>SHIELDED 季度报告</span>
+              </Link>
               <Link href="/blogs" className={styles.mobileMenuLink} onClick={() => setMobileMenuOpen(false)}>
                 <span>📝</span>
                 <span>博客</span>

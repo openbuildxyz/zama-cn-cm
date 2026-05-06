@@ -423,7 +423,7 @@ export default function Home() {
 
           <div className={styles.reportCtaWrap}>
             <Link
-              href="https://cdn.prod.website-files.com/61bc21e3a843412266a08eb3/69f33f2384ca5551a60cb1c8_SHIELDED-Zama-Q126-Report.pdf"
+              href="https://www.zama.org/shielded"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.reportCta}
@@ -517,9 +517,9 @@ export default function Home() {
                 <Rocket className={styles.buttonIcon} />
                 立即加入
               </Link>
-              <Link href="https://t.me/zamacn" target="_blank" className={styles.ctaSecondaryButton}>
-                <SiTelegram className={styles.buttonIcon} />
-                加入 Telegram
+              <Link href="https://discord.com/invite/zama" target="_blank" className={styles.ctaSecondaryButton}>
+                <SiX className={styles.buttonIcon} />
+                加入 Discord
               </Link>
               <Link href="https://x.com/zama_fhe" target="_blank" className={styles.ctaSecondaryButton}>
                 <SiX className={styles.buttonIcon} />
